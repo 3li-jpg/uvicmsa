@@ -17,18 +17,23 @@ export const team: TeamProfile[] = [
     initials: 'AI',
   },
   {
-    name: 'Ahmed Malik · Finley Hildbrand',
+    name: 'Ahmed Malik',
     role: 'Brothers’ Social Coordinators',
-    initials: 'BS',
+    initials: 'AM',
   },
   {
-    name: 'Rana Ghazy · Kariman Hamad',
+    name: 'Finley Hildbrand',
+    role: 'Brothers’ Social Coordinators',
+    initials: 'FH',
+  },
+  {
+    name: 'Rana Ghazy',
     role: 'Sisters’ Social Coordinators',
-    initials: 'SS',
+    initials: 'RG',
   },
   {
-    name: 'Rana Mahmoud',
-    role: 'Website Manager',
-    initials: 'RM',
+    name: 'Kariman Hamad',
+    role: 'Sisters’ Social Coordinators',
+    initials: 'KH',
   },
 ]

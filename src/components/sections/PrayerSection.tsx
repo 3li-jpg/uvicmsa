@@ -1,4 +1,4 @@
-import { Clock3, DoorOpen, KeyRound, MapPin, MoveRight } from 'lucide-react'
+import { Clock3, DoorOpen, KeyRound, MapPin } from 'lucide-react'
 import { prayerInfo } from '../../content/prayer'
 import { Container } from '../ui/Container'
 import { Card } from '../ui/Card'
@@ -15,11 +15,11 @@ export function PrayerSection() {
         />
 
         <div className="mt-12 grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)]">
-          <Card className="overflow-hidden bg-[linear-gradient(155deg,rgba(23,51,40,0.96),rgba(47,90,70,0.9))] p-8 text-ivory shadow-[0_28px_90px_rgba(23,51,40,0.24)] sm:p-10">
+          <Card className="overflow-hidden border-white/30 bg-[linear-gradient(155deg,rgba(31,43,61,0.96),rgba(110,143,182,0.82))] p-8 text-ivory shadow-[0_28px_90px_rgba(93,123,162,0.24)] sm:p-10">
             <div className="flex flex-wrap items-center justify-between gap-4">
               <div>
                 <p className="text-sm uppercase tracking-[0.24em] text-ivory/60">{prayerInfo.jummahTitle}</p>
-                <h3 className="mt-4 text-3xl font-semibold tracking-[-0.05em] sm:text-4xl">Jummah Prayer</h3>
+                <h3 className="mt-4 font-display text-3xl font-bold tracking-[-0.06em] sm:text-4xl">Jummah Prayer</h3>
               </div>
               <div className="rounded-full border border-white/12 bg-white/10 px-4 py-2 text-sm text-ivory/80 backdrop-blur-xl">
                 {prayerInfo.frequency}
@@ -30,12 +30,12 @@ export function PrayerSection() {
               <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-5 backdrop-blur-xl">
                 <Clock3 className="h-5 w-5 text-gold" />
                 <p className="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/60">Time</p>
-                <p className="mt-2 text-2xl font-medium tracking-[-0.04em]">{prayerInfo.time}</p>
+                <p className="mt-2 font-display text-2xl font-bold tracking-[-0.05em]">{prayerInfo.time}</p>
               </div>
               <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-5 backdrop-blur-xl">
                 <MapPin className="h-5 w-5 text-gold" />
                 <p className="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/60">Location</p>
-                <p className="mt-2 text-2xl font-medium tracking-[-0.04em]">{prayerInfo.location}</p>
+                <p className="mt-2 font-display text-2xl font-bold tracking-[-0.05em]">{prayerInfo.location}</p>
               </div>
             </div>
 
@@ -45,7 +45,7 @@ export function PrayerSection() {
           <div className="grid gap-6">
             <Card className="p-6 sm:p-7">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-deep text-ivory shadow-soft">
+                <div className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-deep text-ivory shadow-soft">
                   <DoorOpen className="h-5 w-5" />
                 </div>
                 <div>
@@ -59,7 +59,7 @@ export function PrayerSection() {
 
             <Card className="p-6 sm:p-7">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gold/15 text-deep shadow-soft">
+                <div className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-sage text-deep shadow-soft">
                   <KeyRound className="h-5 w-5" />
                 </div>
                 <div>
@@ -71,19 +71,6 @@ export function PrayerSection() {
           </div>
         </div>
 
-        <div className="mt-6 grid gap-5 lg:grid-cols-3">
-          {prayerInfo.sections.map((item) => (
-            <Card className="group p-6 hover:-translate-y-1 hover:bg-white/72" key={item.title}>
-              <div className="flex items-start justify-between gap-4">
-                <div>
-                  <h3 className="text-lg font-medium tracking-[-0.03em] text-deep">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-body/78">{item.description}</p>
-                </div>
-                <MoveRight className="mt-1 h-5 w-5 text-deep/35 transition-transform duration-300 group-hover:translate-x-1" />
-              </div>
-            </Card>
-          ))}
-        </div>
       </Container>
     </section>
   )

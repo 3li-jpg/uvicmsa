@@ -15,6 +15,8 @@ export const externalLinks = {
   linktree: 'https://linktr.ee/uvicmsa',
   instagram: 'https://www.instagram.com/uvicmsa/',
   discord: 'https://discord.gg/ME7DwPN75X',
+  whatsapp: 'https://chat.whatsapp.com/FhWuzUTAu3B8IyjIaTsj84',
+  facebook: 'https://www.facebook.com/msauvic/',
   ruh: 'https://www.ruhcare.com/msa/victoria',
 } as const
 

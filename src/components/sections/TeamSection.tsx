@@ -1,6 +1,5 @@
 import { team } from '../../content/team'
 import { Container } from '../ui/Container'
-import { Card } from '../ui/Card'
 import { SectionHeading } from '../ui/SectionHeading'
 
 export function TeamSection() {
@@ -13,20 +12,17 @@ export function TeamSection() {
           description="Updated from the previous MSA website."
         />
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <ul className="mt-12 divide-y divide-white/70 overflow-hidden rounded-[2rem] border border-white/75 bg-white/72 shadow-soft backdrop-blur-md">
           {team.map((member) => (
-            <Card className="group h-full p-6 hover:-translate-y-1 hover:bg-white/72 sm:p-7" key={member.name}>
-              <div className="flex h-16 w-16 items-center justify-center rounded-[1.5rem] bg-[linear-gradient(135deg,rgba(23,51,40,0.98),rgba(145,166,139,0.82))] text-lg font-semibold tracking-[-0.04em] text-ivory shadow-[0_22px_48px_rgba(23,51,40,0.16)]">
-                {member.initials}
+            <li className="px-6 py-5 sm:px-8" key={member.name}>
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">
+                <h3 className="font-display text-2xl font-bold tracking-[-0.05em] text-deep">{member.name}</h3>
+                <p className="text-sm font-medium text-body/70 sm:text-right">{member.role}</p>
               </div>
-              <div className="mt-6">
-                <h3 className="text-2xl font-medium tracking-[-0.04em] text-deep">{member.name}</h3>
-                <p className="mt-2 text-sm font-medium text-gold">{member.role}</p>
-                {member.bio ? <p className="mt-4 text-sm leading-7 text-body/80">{member.bio}</p> : null}
-              </div>
-            </Card>
+              {member.bio ? <p className="mt-3 max-w-3xl text-sm leading-7 text-body/80">{member.bio}</p> : null}
+            </li>
           ))}
-        </div>
+        </ul>
       </Container>
     </section>
   )

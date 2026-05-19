@@ -38,7 +38,7 @@ export function About() {
               return (
                 <Card className="group p-6 hover:-translate-y-1 hover:bg-white/72 sm:p-7" key={value.title}>
                   <div className="flex gap-4 sm:gap-5">
-                    <div className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-deep text-ivory shadow-[0_18px_40px_rgba(23,51,40,0.18)] transition-transform duration-300 group-hover:-translate-y-1">
+                    <div className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-deep text-ivory shadow-[0_18px_40px_rgba(93,123,162,0.16)] transition-transform duration-300 group-hover:-translate-y-1">
                       <Icon className="h-5 w-5" />
                     </div>
                     <div>

@@ -9,10 +9,10 @@ type ButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 
 export function Button({ className, href, variant = 'primary', children, ...props }: ButtonProps) {
   const styles = cn(
-    'inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium tracking-[0.01em] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ivory',
+    'inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium tracking-[0.01em] transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest focus-visible:ring-offset-2 focus-visible:ring-offset-ivory',
     variant === 'primary'
-      ? 'bg-deep text-ivory shadow-soft hover:-translate-y-0.5 hover:bg-forest'
-      : 'border border-white/50 bg-white/55 text-deep shadow-[0_12px_30px_rgba(23,51,40,0.08)] backdrop-blur-xl hover:-translate-y-0.5 hover:bg-white/75',
+      ? 'bg-deep text-ivory shadow-soft hover:-translate-y-0.5 hover:bg-[#2b3d57]'
+      : 'border border-white/70 bg-white/76 text-deep shadow-[0_14px_34px_rgba(93,123,162,0.12)] backdrop-blur-md hover:-translate-y-0.5 hover:bg-white/90',
     className,
   )
 

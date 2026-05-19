@@ -41,18 +41,17 @@ export function Navbar() {
       <Container>
         <div
           className={cn(
-            'mx-auto flex w-full items-center justify-between rounded-full border border-white/50 bg-white/65 px-4 py-3 shadow-glow backdrop-blur-2xl transition-all duration-300 sm:px-6',
-            isScrolled && 'bg-white/78',
+            'mx-auto flex w-full items-center justify-between rounded-full border border-white/80 bg-white/72 px-4 py-3 shadow-glow backdrop-blur-md transition-all duration-300 sm:px-6',
+            isScrolled && 'bg-white/84',
           )}
         >
           <Link
-            className="flex items-center gap-3 rounded-full px-2 py-1 text-sm font-semibold tracking-[0.12em] text-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+            className="flex items-center gap-3 rounded-full px-2 py-1 text-sm font-semibold tracking-[0.12em] text-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
             href="/#home"
           >
-            <span className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-white p-1 shadow-soft">
-              <Image alt="UVic MSA logo" className="h-full w-full object-contain" height={36} src="/uvic-msa-logo.png" width={36} />
+            <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white/80 p-1 shadow-soft">
+              <Image alt="UVic MSA logo mark" className="h-full w-full object-contain" height={40} src="/uvic-msa-logo-mark.png" width={40} />
             </span>
-            <span className="hidden text-xs uppercase sm:inline">UVic MSA</span>
           </Link>
 
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
@@ -61,8 +60,8 @@ export function Navbar() {
               return (
                 <Link
                   className={cn(
-                    'rounded-full px-4 py-2 text-sm text-deep/78 transition-all duration-300 hover:bg-white/75 hover:text-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold',
-                    isActive && 'bg-white/80 text-deep shadow-[0_10px_24px_rgba(23,51,40,0.08)]',
+                    'rounded-full px-4 py-2 text-sm text-deep/78 transition-all duration-300 hover:bg-white/82 hover:text-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest',
+                    isActive && 'bg-white/88 text-deep shadow-[0_10px_24px_rgba(93,123,162,0.12)]',
                   )}
                   href={item.href}
                   key={item.id}
@@ -82,7 +81,7 @@ export function Navbar() {
           <button
             aria-expanded={isOpen}
             aria-label={isOpen ? 'Close menu' : 'Open menu'}
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/50 bg-white/60 text-deep shadow-soft transition-all duration-300 hover:bg-white/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold lg:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/75 bg-white/72 text-deep shadow-soft transition-all duration-300 hover:bg-white/88 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest lg:hidden"
             onClick={() => setIsOpen((open) => !open)}
             type="button"
           >
@@ -93,7 +92,7 @@ export function Navbar() {
 
       <div
         className={cn(
-          'fixed inset-0 z-40 bg-[linear-gradient(180deg,rgba(247,245,239,0.95),rgba(233,225,211,0.98))] px-6 pb-8 pt-28 transition-all duration-500 lg:hidden',
+          'fixed inset-0 z-40 bg-[linear-gradient(180deg,rgba(248,245,239,0.95),rgba(238,243,248,0.98))] px-6 pb-8 pt-28 transition-all duration-500 lg:hidden',
           isOpen ? 'visible opacity-100' : 'invisible opacity-0',
         )}
       >
@@ -102,7 +101,7 @@ export function Navbar() {
             {navItems.map((item, index) => (
               <Link
                 className={cn(
-                  'block rounded-[1.75rem] border border-white/55 bg-white/60 px-5 py-5 text-2xl font-medium tracking-[-0.04em] text-deep shadow-soft backdrop-blur-xl transition-all duration-500',
+                  'block rounded-[1.75rem] border border-white/80 bg-white/72 px-5 py-5 font-display text-2xl font-bold tracking-[-0.045em] text-deep shadow-soft backdrop-blur-md transition-all duration-500',
                   isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0',
                 )}
                 href={item.href}
@@ -115,7 +114,7 @@ export function Navbar() {
             ))}
           </nav>
 
-          <div className="rounded-[2rem] border border-white/55 bg-white/55 p-6 shadow-soft backdrop-blur-xl">
+          <div className="rounded-[2rem] border border-white/80 bg-white/72 p-6 shadow-soft backdrop-blur-md">
             <p className="text-sm uppercase tracking-[0.2em] text-body/55">Get connected</p>
             <p className="mt-3 max-w-sm text-sm leading-7 text-body/78">
               Join Jummah, message the team for prayer room access, and stay close to the community through the year.

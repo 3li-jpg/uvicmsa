@@ -51,7 +51,7 @@ export async function InstagramSection() {
                 <Camera className="h-5 w-5" />
               </div>
               <div>
-                <h3 className="text-2xl font-medium tracking-[-0.04em] text-deep">Follow @uvicmsa</h3>
+                <h3 className="font-display text-2xl font-bold tracking-[-0.05em] text-deep">Follow @uvicmsa</h3>
                 <p className="mt-3 max-w-2xl text-sm leading-7 text-body/80">
                   The latest posts could not be loaded automatically right now, but the Instagram page is linked below.
                 </p>

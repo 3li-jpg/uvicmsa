@@ -4,11 +4,17 @@ Official website for the University of Victoria Muslim Students’ Association.
 
 ## Overview
 
-This project is a Next.js 14 site for the UVic MSA. It includes:
+This project is the public-facing website for the UVic MSA. It brings together the most important student information in one place, including prayer details, events, campus resources, food guidance, community links, and current executive information.
 
-- a landing page for community information and announcements
-- sections for prayer info, events, food guidance, team members, and resources
-- a dedicated resource page for RUH counselling support
+The site is designed as a calm, editorial landing page for Muslim student life at UVic, with quick access to community platforms such as Discord, Instagram, Facebook, WhatsApp, Linktree, and the Ruh mental health resource.
+
+## What the app includes
+
+- a homepage with sections for prayer, events, food guidance, team information, resources, and FAQs
+- a resources area featuring Ruh mental health support and key UVic MSA community links
+- an Instagram section that surfaces recent posts from the UVic MSA account
+- footer links for the main social and community platforms used by the MSA
+- a compatibility redirect for the older Ruh counselling route
 
 ## Tech stack
 
@@ -17,61 +23,26 @@ This project is a Next.js 14 site for the UVic MSA. It includes:
 - TypeScript
 - Tailwind CSS
 
-## Getting started
-
-### Prerequisites
-
-- Node.js 18+
-- npm
-
-### Install dependencies
-
-```bash
-npm install
-```
-
-### Start the development server
-
-```bash
-npm run dev
-```
-
-Then open `http://localhost:3000`.
-
-## Available scripts
-
-```bash
-npm run dev    # start local development server
-npm run build  # create a production build
-npm run start  # run the production server
-```
-
 ## Project structure
 
 ```text
 app/                    Next.js app router entrypoints
   page.tsx              Main homepage route
-  resources/            Additional resource pages
+  resources/            Route compatibility redirects and resource paths
 src/
   App.tsx               Homepage composition
   components/           Layout, section, and UI components
-  content/              Site content and static data
+  content/              Site content and structured link data
   data/                 Shared TypeScript types
   hooks/                React hooks
   lib/                  Utility helpers
 public/                 Static assets
 ```
 
-## Content updates
+## Content summary
 
-Most site copy and structured content live in `src/content/`. Update those files to change text, links, FAQs, events, team details, and other homepage content.
+Most structured content lives in `src/content/`, where the site copy, navigation links, FAQs, events, team details, and external community links are defined. The homepage layout itself is composed from reusable section components in `src/components/`.
 
-## Deployment
+## Purpose
 
-Build the app before deployment:
-
-```bash
-npm run build
-```
-
-If the build succeeds, the project is ready to run in production with `npm run start`.
+The app exists to give UVic students a simple, welcoming place to find the core information they need from the Muslim Students’ Association without relying on scattered links or outdated pages.

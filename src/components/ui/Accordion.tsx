@@ -20,14 +20,11 @@ export function Accordion({ items }: AccordionProps) {
         const triggerId = `faq-trigger-${index}`
 
         return (
-          <div
-            className="rounded-[1.75rem] border border-white/55 bg-white/65 p-2 shadow-soft backdrop-blur-xl"
-            key={item.question}
-          >
+          <div className="rounded-[1.75rem] border border-white/75 bg-white/72 p-2 shadow-soft backdrop-blur-md" key={item.question}>
             <button
               aria-controls={panelId}
               aria-expanded={isOpen}
-              className="flex w-full items-center justify-between gap-4 rounded-[1.2rem] px-5 py-5 text-left text-base font-medium text-deep transition-colors duration-300 hover:bg-white/65 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+              className="flex w-full items-center justify-between gap-4 rounded-[1.2rem] px-5 py-5 text-left text-base font-medium text-deep transition-colors duration-300 hover:bg-white/72 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest"
               id={triggerId}
               onClick={() => setOpenIndex(isOpen ? -1 : index)}
               type="button"

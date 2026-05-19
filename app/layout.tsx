@@ -1,10 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Atkinson_Hyperlegible, Inter } from 'next/font/google'
 import './globals.css'
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
+})
+
+const atkinson = Atkinson_Hyperlegible({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-display',
 })
 
 export const metadata: Metadata = {
@@ -14,7 +20,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html className={inter.variable} lang="en">
+    <html className={`${inter.variable} ${atkinson.variable}`} lang="en">
       <body>{children}</body>
     </html>
   )
