@@ -12,7 +12,7 @@ import { Navbar } from './components/layout/Navbar'
 
 function App() {
   return (
-    <div className="relative overflow-x-clip bg-ivory text-body">
+    <div className="relative overflow-x-clip bg-ivory text-body dark:bg-transparent dark:text-ivory/95">
       <a className="skip-link" href="#main-content">
         Skip to content
       </a>

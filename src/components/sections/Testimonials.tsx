@@ -17,12 +17,12 @@ export function Testimonials() {
 
         <div className="mt-12 grid gap-5 lg:grid-cols-3">
           {testimonials.map((item) => (
-            <Card className="h-full p-6 sm:p-7" key={item.quote}>
+            <Card className="h-full p-6 dark:border-white/10 dark:bg-white/[0.06] sm:p-7" key={item.quote}>
               <Quote className="h-6 w-6 text-gold" />
-              <blockquote className="mt-6 text-lg leading-8 tracking-[-0.02em] text-deep">
+              <blockquote className="mt-6 text-lg leading-8 tracking-[-0.02em] text-deep dark:text-ivory">
                 “{item.quote}”
               </blockquote>
-              <p className="mt-6 text-sm uppercase tracking-[0.18em] text-body/45">{item.attribution}</p>
+              <p className="mt-6 text-sm uppercase tracking-[0.18em] text-body/45 dark:text-ivory/80">{item.attribution}</p>
             </Card>
           ))}
         </div>

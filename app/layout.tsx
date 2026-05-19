@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Atkinson_Hyperlegible, Inter } from 'next/font/google'
+import { ThemeProvider } from '../src/components/ui/ThemeProvider'
 import './globals.css'
 
 const inter = Inter({
@@ -20,8 +21,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html className={`${inter.variable} ${atkinson.variable}`} lang="en">
-      <body>{children}</body>
+    <html className={`${inter.variable} ${atkinson.variable}`} lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
+      </body>
     </html>
   )
 }

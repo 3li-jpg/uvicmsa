@@ -70,7 +70,7 @@ export function Footer() {
             <h2 className="mt-5 max-w-2xl font-display text-4xl font-bold tracking-[-0.06em] text-ivory sm:text-5xl">
               UVic Muslim Students’ Association
             </h2>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-ivory/72">
+            <p className="mt-6 max-w-2xl text-base leading-8 text-ivory/80">
               Prayer info, student resources, and ways to stay connected.
             </p>
 
@@ -80,7 +80,7 @@ export function Footer() {
                 return (
                   <a
                     aria-label={link.label}
-                    className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/6 text-ivory/84 transition-colors duration-300 hover:bg-white/10 hover:text-ivory"
+                    className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/6 text-ivory/90 transition-colors duration-300 hover:bg-white/10 hover:text-ivory"
                     href={link.href}
                     key={link.label}
                     rel="noreferrer"
@@ -96,7 +96,7 @@ export function Footer() {
 
           <div>
             <p className="text-sm uppercase tracking-[0.2em] text-ivory/50">Navigation</p>
-            <ul className="mt-5 space-y-3 text-sm text-ivory/72">
+            <ul className="mt-5 space-y-3 text-sm text-ivory/80">
               {navItems.map((item) => (
                 <li key={item.id}>
                   <Link className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-ivory" href={item.href}>
@@ -117,7 +117,7 @@ export function Footer() {
                   Jummah
                 </dt>
                 <dd className="mt-3 font-display text-2xl font-bold tracking-[-0.05em] text-ivory">Every Friday · 1:30 PM</dd>
-                <dd className="mt-2 text-sm leading-7 text-ivory/72">UVic Multifaith Centre</dd>
+                <dd className="mt-2 text-sm leading-7 text-ivory/80">UVic Multifaith Centre</dd>
               </div>
               <div>
                 <dt className="flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-ivory/55">
@@ -125,7 +125,7 @@ export function Footer() {
                   Prayer room
                 </dt>
                 <dd className="mt-3 font-display text-2xl font-bold tracking-[-0.05em] text-ivory">Sedgewick Room C125</dd>
-                <dd className="mt-2 text-sm leading-7 text-ivory/72">
+                <dd className="mt-2 text-sm leading-7 text-ivory/80">
                   Contact the MSA through Discord or Instagram for the door code.
                 </dd>
               </div>
