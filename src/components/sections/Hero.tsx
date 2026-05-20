@@ -1,4 +1,4 @@
-import { ArrowRight, Clock3, MapPin } from 'lucide-react'
+import { Clock3, MapPin } from 'lucide-react'
 import { heroContent } from '../../content/site'
 import { BlurFade } from '../ui/BlurFade'
 import { Button } from '../ui/Button'
@@ -7,7 +7,7 @@ import { TextAnimate } from '../ui/TextAnimate'
 
 export function Hero() {
   return (
-    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-hero-glow pb-12 pt-28 dark:bg-[radial-gradient(circle_at_top,rgba(110,143,182,0.22),transparent_36%),radial-gradient(circle_at_18%_18%,rgba(53,66,86,0.64),transparent_28%),linear-gradient(180deg,rgba(16,26,42,0.96)_0%,rgba(22,34,53,0.98)_100%)] lg:pb-20 lg:pt-40" id="home">
+    <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-hero-glow pb-12 pt-[calc(7rem+env(safe-area-inset-top)+0.75rem)] dark:bg-[radial-gradient(circle_at_top,rgba(110,143,182,0.22),transparent_36%),radial-gradient(circle_at_18%_18%,rgba(53,66,86,0.64),transparent_28%),linear-gradient(180deg,rgba(16,26,42,0.96)_0%,rgba(22,34,53,0.98)_100%)] sm:pt-28 lg:pb-20 lg:pt-40" id="home">
       <Container>
         <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,1.2fr)_minmax(320px,0.8fr)] lg:items-stretch lg:gap-12">
           <BlurFade className="relative mx-auto flex max-w-3xl flex-col items-center justify-center text-center lg:mx-0 lg:max-w-none lg:items-start lg:text-left" inView offset={18}>
@@ -27,11 +27,11 @@ export function Hero() {
               {heroContent.description}
             </p>
 
-            <div className="mt-5 grid w-full max-w-xs grid-cols-2 gap-2.5 sm:mt-10 sm:max-w-md sm:gap-4 lg:flex lg:w-auto lg:max-w-none lg:justify-start">
-              <Button className="min-h-10 w-full rounded-[1.25rem] px-3 py-2 text-[0.75rem] leading-tight sm:min-h-11 sm:rounded-full sm:px-6 sm:py-3 sm:text-sm" href="#contact">
+            <div className="mt-5 grid w-full max-w-[22rem] grid-cols-[1.2fr_1fr] gap-2.5 sm:mt-10 sm:max-w-md sm:gap-4 lg:flex lg:w-auto lg:max-w-none lg:justify-start">
+              <Button className="min-h-10 w-full whitespace-nowrap rounded-[1.25rem] px-4 py-2 text-[0.75rem] leading-tight sm:min-h-11 sm:rounded-full sm:px-6 sm:py-3 sm:text-sm" href="#contact">
                 {heroContent.primaryCta}
               </Button>
-              <Button className="min-h-10 w-full rounded-[1.25rem] px-3 py-2 text-[0.75rem] leading-tight sm:min-h-11 sm:rounded-full sm:px-6 sm:py-3 sm:text-sm" href="#prayer" variant="secondary">
+              <Button className="min-h-10 w-full whitespace-nowrap rounded-[1.25rem] px-3 py-2 text-[0.75rem] leading-tight sm:min-h-11 sm:rounded-full sm:px-6 sm:py-3 sm:text-sm" href="#prayer" variant="secondary">
                 {heroContent.secondaryCta}
               </Button>
             </div>
@@ -69,9 +69,8 @@ export function Hero() {
                   </div>
                 </div>
 
-                <div className="mt-5 flex items-center gap-2 text-sm text-ivory/90 sm:mt-8">
+                <div className="mt-5 text-sm text-ivory/90 sm:mt-8">
                   <span>Spiritual support, student life, and meaningful connection.</span>
-                  <ArrowRight className="h-4 w-4" />
                 </div>
               </div>
             </div>
