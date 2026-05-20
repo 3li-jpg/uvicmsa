@@ -17,7 +17,7 @@ export const team: TeamProfile[] = [
     initials: 'AI',
   },
   {
-    name: 'Ahmed Malik',
+    name: 'Ahmad Malik',
     role: 'Brothers’ Social Coordinators',
     initials: 'AM',
   },

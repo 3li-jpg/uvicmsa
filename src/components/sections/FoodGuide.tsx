@@ -16,6 +16,9 @@ export function FoodGuide() {
           title="Nearby spots that help students eat well, gather easily, and feel more at home."
           description="This guide brings together a selection of restaurants and markets students may find useful around UVic and the wider area."
         />
+        <p className="mt-5 inline-flex rounded-full border border-white/70 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-body/55 shadow-soft dark:border-white/10 dark:bg-white/[0.08] dark:text-ivory/70">
+          Click to view locations on Google Maps
+        </p>
 
         <div className="mt-8 sm:mt-12 grid gap-6 xl:grid-cols-[minmax(0,1fr)_minmax(0,1fr)]">
           <Card className="p-5 dark:border-white/10 dark:bg-white/[0.06] sm:p-8">
@@ -30,9 +33,8 @@ export function FoodGuide() {
             </div>
             <div className="mt-6 grid gap-3 sm:mt-8 sm:grid-cols-2">
               {restaurants.map((place) => (
-                <div className="rounded-[1.35rem] border border-white/75 bg-white/78 px-4 py-4 text-sm text-deep shadow-[0_10px_24px_rgba(93,123,162,0.1)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/92 dark:border-white/10 dark:bg-white/[0.08] dark:text-ivory/90 dark:hover:bg-white/[0.12]" key={place.name}>
-                  {place.name}
-                </div>
+                <a className="rounded-[1.35rem] border border-white/75 bg-white/78 px-4 py-4 text-sm text-deep shadow-[0_10px_24px_rgba(93,123,162,0.1)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/92 dark:border-white/10 dark:bg-white/[0.08] dark:text-ivory/90 dark:hover:bg-white/[0.12]" href={place.mapUrl} key={place.name} rel="noreferrer" target="_blank">
+                  <span className="block font-medium">{place.name}</span>                </a>
               ))}
             </div>
           </Card>
@@ -49,9 +51,8 @@ export function FoodGuide() {
             </div>
             <div className="mt-6 grid gap-3 sm:mt-8">
               {markets.map((place) => (
-                <div className="rounded-[1.35rem] border border-white/75 bg-white/78 px-4 py-4 text-sm text-deep shadow-[0_10px_24px_rgba(93,123,162,0.1)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/92 dark:border-white/10 dark:bg-white/[0.08] dark:text-ivory/90 dark:hover:bg-white/[0.12]" key={place.name}>
-                  {place.name}
-                </div>
+                <a className="rounded-[1.35rem] border border-white/75 bg-white/78 px-4 py-4 text-sm text-deep shadow-[0_10px_24px_rgba(93,123,162,0.1)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/92 dark:border-white/10 dark:bg-white/[0.08] dark:text-ivory/90 dark:hover:bg-white/[0.12]" href={place.mapUrl} key={place.name} rel="noreferrer" target="_blank">
+                  <span className="block font-medium">{place.name}</span>                </a>
               ))}
             </div>
           </Card>

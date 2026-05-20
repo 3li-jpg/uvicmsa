@@ -51,6 +51,7 @@ export type EventItem = {
 export type FoodPlace = {
   name: string
   category: 'Restaurant' | 'Market'
+  mapUrl: string
 }
 
 export type TeamProfile = {
