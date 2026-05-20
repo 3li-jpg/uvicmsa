@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import {
   motion,
   useInView,
@@ -32,6 +32,7 @@ const getFilter = (v: Variants[string]) =>
   typeof v === 'function' ? undefined : v.filter
 
 const normalizeSeconds = (value: number) => (value > 10 ? value / 1000 : value)
+const mobileAnimationQuery = '(max-width: 767px)'
 
 export function BlurFade({
   children,
@@ -48,8 +49,19 @@ export function BlurFade({
 }: BlurFadeProps) {
   const ref = useRef(null)
   const shouldReduceMotion = useReducedMotion()
+  const [isMobileViewport, setIsMobileViewport] = useState(false)
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin })
   const isInView = !inView || inViewResult
+
+  useEffect(() => {
+    const mobileMedia = window.matchMedia(mobileAnimationQuery)
+    const updateMobileViewport = () => setIsMobileViewport(mobileMedia.matches)
+
+    updateMobileViewport()
+    mobileMedia.addEventListener('change', updateMobileViewport)
+
+    return () => mobileMedia.removeEventListener('change', updateMobileViewport)
+  }, [])
   const defaultVariants: Variants = {
     hidden: {
       [direction === 'left' || direction === 'right' ? 'x' : 'y']:
@@ -73,11 +85,11 @@ export function BlurFade({
     visibleFilter != null &&
     hiddenFilter !== visibleFilter
 
-  if (shouldReduceMotion) {
+  if (shouldReduceMotion || isMobileViewport) {
     return (
-      <motion.div ref={ref} className={className} {...props}>
+      <div ref={ref} className={className}>
         {children}
-      </motion.div>
+      </div>
     )
   }
 
