@@ -7,7 +7,7 @@ import { TextAnimate } from '../ui/TextAnimate'
 
 export function PrayerSection() {
   return (
-    <section className="py-24 sm:py-28" id="prayer">
+    <section className="py-16 sm:py-24 lg:py-28" id="prayer">
       <Container>
         <SectionHeading
           eyebrow="Prayer at UVic"
@@ -19,8 +19,8 @@ export function PrayerSection() {
           description="Prayer is at the heart of the UVic MSA experience. This section brings together Jummah details, prayer room access, and the key information students need most often."
         />
 
-        <div className="mt-12 grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)]">
-          <Card className="overflow-hidden border-white/30 bg-[linear-gradient(155deg,rgba(31,43,61,0.96),rgba(110,143,182,0.82))] p-8 text-ivory shadow-[0_28px_90px_rgba(93,123,162,0.24)] sm:p-10">
+        <div className="mt-8 sm:mt-12 grid gap-6 xl:grid-cols-[minmax(0,1.15fr)_minmax(320px,0.85fr)]">
+          <Card className="overflow-hidden border-white/30 bg-[linear-gradient(155deg,rgba(31,43,61,0.96),rgba(110,143,182,0.82))] p-5 text-ivory shadow-[0_28px_90px_rgba(93,123,162,0.24)] sm:p-8 lg:p-10">
             <div>
               <div className="flex flex-wrap items-center justify-between gap-4">
                 <div>
@@ -36,25 +36,25 @@ export function PrayerSection() {
                 </div>
               </div>
 
-              <div className="mt-10 grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-5 backdrop-blur-xl">
+              <div className="mt-7 grid gap-4 sm:mt-10 sm:grid-cols-2">
+                <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-4 backdrop-blur-xl sm:p-5">
                   <Clock3 className="h-5 w-5 text-gold" />
                   <p className="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/60">Time</p>
                   <p className="mt-2 font-display text-2xl font-bold tracking-[-0.05em]">{prayerInfo.time}</p>
                 </div>
-                <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-5 backdrop-blur-xl">
+                <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-4 backdrop-blur-xl sm:p-5">
                   <MapPin className="h-5 w-5 text-gold" />
                   <p className="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/60">Location</p>
                   <p className="mt-2 font-display text-2xl font-bold tracking-[-0.05em]">{prayerInfo.location}</p>
                 </div>
               </div>
 
-              <p className="mt-8 max-w-3xl text-base leading-8 text-ivory/80">{prayerInfo.weeklyNote}</p>
+              <p className="mt-6 max-w-3xl text-base leading-8 text-ivory/80 sm:mt-8">{prayerInfo.weeklyNote}</p>
             </div>
           </Card>
 
           <div className="grid gap-6">
-            <Card className="p-6 dark:border-white/10 dark:bg-white/[0.06] sm:p-7">
+            <Card className="p-5 dark:border-white/10 dark:bg-white/[0.06] sm:p-7">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-deep text-ivory shadow-soft dark:bg-white/[0.12] dark:text-ivory">
                   <DoorOpen className="h-5 w-5" />
@@ -68,7 +68,7 @@ export function PrayerSection() {
               </div>
             </Card>
 
-            <Card className="p-6 dark:border-white/10 dark:bg-white/[0.06] sm:p-7">
+            <Card className="p-5 dark:border-white/10 dark:bg-white/[0.06] sm:p-7">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 flex-none items-center justify-center rounded-2xl bg-sage text-deep shadow-soft dark:bg-white/[0.12] dark:text-ivory">
                   <KeyRound className="h-5 w-5" />

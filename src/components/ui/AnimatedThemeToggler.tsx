@@ -156,7 +156,9 @@ export function AnimatedThemeToggler({
       localStorage.setItem('theme', nextTheme)
     }
 
-    if (typeof document.startViewTransition !== 'function') {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
+    if (prefersReducedMotion || typeof document.startViewTransition !== 'function') {
       applyTheme()
       return
     }
@@ -177,8 +179,8 @@ export function AnimatedThemeToggler({
       flushSync(applyTheme)
     })
 
-    transition.finished.finally(cleanup)
-    transition.ready.then(() => {
+    void transition.finished.finally(cleanup)
+    void transition.ready.then(() => {
       document.documentElement.animate(
         { clipPath },
         {
@@ -197,7 +199,7 @@ export function AnimatedThemeToggler({
       ref={buttonRef}
       onClick={toggleTheme}
       className={cn(
-        'inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/75 bg-white/72 text-deep shadow-soft backdrop-blur-md transition-all duration-300 hover:bg-white/88 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest dark:border-white/10 dark:bg-white/10 dark:text-ivory dark:hover:bg-white/16',
+        'inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/75 bg-white/72 text-deep shadow-soft backdrop-blur-md transition-all duration-300 hover:bg-white/88 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest dark:border-white/10 dark:bg-white/10 dark:text-ivory dark:hover:bg-white/16',
         className,
       )}
       {...props}

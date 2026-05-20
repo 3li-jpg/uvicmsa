@@ -4,7 +4,7 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 export function TeamSection() {
   return (
-    <section className="py-24 sm:py-28" id="team">
+    <section className="py-16 sm:py-24 lg:py-28" id="team">
       <Container>
         <SectionHeading
           eyebrow="Current team"
@@ -12,7 +12,7 @@ export function TeamSection() {
           description="Updated from the previous MSA website."
         />
 
-        <ul className="mt-12 divide-y divide-white/70 overflow-hidden rounded-[2rem] border border-white/75 bg-white/72 shadow-soft backdrop-blur-md dark:divide-white/10 dark:border-white/10 dark:bg-white/[0.06] dark:shadow-[0_22px_60px_rgba(0,0,0,0.28)]">
+        <ul className="mt-8 sm:mt-12 divide-y divide-white/70 overflow-hidden rounded-[2rem] border border-white/75 bg-white/72 shadow-soft backdrop-blur-md dark:divide-white/10 dark:border-white/10 dark:bg-white/[0.06] dark:shadow-[0_22px_60px_rgba(0,0,0,0.28)]">
           {team.map((member) => (
             <li className="px-6 py-5 sm:px-8" key={member.name}>
               <div className="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between sm:gap-6">

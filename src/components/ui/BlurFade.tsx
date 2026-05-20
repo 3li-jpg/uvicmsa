@@ -4,6 +4,7 @@ import { useRef, type ReactNode } from 'react'
 import {
   motion,
   useInView,
+  useReducedMotion,
   type MotionProps,
   type UseInViewOptions,
   type Variants,
@@ -46,6 +47,7 @@ export function BlurFade({
   ...props
 }: BlurFadeProps) {
   const ref = useRef(null)
+  const shouldReduceMotion = useReducedMotion()
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin })
   const isInView = !inView || inViewResult
   const defaultVariants: Variants = {
@@ -70,6 +72,14 @@ export function BlurFade({
     hiddenFilter != null &&
     visibleFilter != null &&
     hiddenFilter !== visibleFilter
+
+  if (shouldReduceMotion) {
+    return (
+      <motion.div ref={ref} className={className} {...props}>
+        {children}
+      </motion.div>
+    )
+  }
 
   return (
     <motion.div

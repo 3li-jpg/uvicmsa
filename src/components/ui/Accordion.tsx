@@ -40,6 +40,7 @@ export function Accordion({ items }: AccordionProps) {
                 'grid overflow-hidden px-5 transition-all duration-300 ease-out',
                 isOpen ? 'grid-rows-[1fr] pb-5 opacity-100' : 'grid-rows-[0fr] opacity-0',
               )}
+              hidden={!isOpen}
               id={panelId}
               role="region"
             >

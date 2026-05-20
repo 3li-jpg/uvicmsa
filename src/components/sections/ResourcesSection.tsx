@@ -47,7 +47,7 @@ const quickLinks = [
 
 export function ResourcesSection() {
   return (
-    <section className="py-24 sm:py-28" id="resources">
+    <section className="py-16 sm:py-24 lg:py-28" id="resources">
       <Container>
         <BlurFade inView offset={18}>
           <SectionHeading
@@ -57,8 +57,8 @@ export function ResourcesSection() {
           />
         </BlurFade>
 
-        <BlurFade className="mt-12" delay={0.08} duration={0.56} inView offset={18}>
-          <Card className="overflow-hidden border-white/30 bg-[linear-gradient(145deg,rgba(31,43,61,0.94),rgba(110,143,182,0.78))] p-7 text-ivory shadow-[0_24px_80px_rgba(93,123,162,0.2)] sm:p-8">
+        <BlurFade className="mt-8 sm:mt-12" delay={0.08} duration={0.56} inView offset={18}>
+          <Card className="overflow-hidden border-white/30 bg-[linear-gradient(145deg,rgba(31,43,61,0.94),rgba(110,143,182,0.78))] p-5 text-ivory shadow-[0_24px_80px_rgba(93,123,162,0.2)] sm:p-8">
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_auto] lg:items-end">
               <div>
                 <p className="text-sm uppercase tracking-[0.24em] text-ivory/60">{ruhContent.eyebrow}</p>
@@ -83,7 +83,7 @@ export function ResourcesSection() {
             const Icon = resource.icon
             return (
               <BlurFade className="h-full" delay={index * 0.08} duration={0.52} inView key={resource.title} offset={18}>
-                <Card className="group flex h-full flex-col justify-between p-6 hover:-translate-y-1 hover:bg-white/72 dark:border-white/10 dark:bg-white/[0.06] dark:hover:bg-white/[0.1] sm:p-7">
+                <Card className="group flex h-full flex-col justify-between p-5 hover:-translate-y-1 hover:bg-white/72 dark:border-white/10 dark:bg-white/[0.06] dark:hover:bg-white/[0.1] sm:p-7">
                   <div>
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sage text-deep shadow-soft dark:bg-white/[0.12] dark:text-ivory">
                       <Icon className="h-5 w-5" />

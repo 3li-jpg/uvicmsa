@@ -3,6 +3,7 @@
 import { memo } from 'react'
 import {
   motion,
+  useReducedMotion,
   type DOMMotionComponents,
   type MotionProps,
   type Variants,
@@ -191,6 +192,15 @@ function TextAnimateBase({
   ...props
 }: TextAnimateProps) {
   const MotionComponent = motionElements[Component]
+  const shouldReduceMotion = useReducedMotion()
+
+  if (shouldReduceMotion) {
+    return (
+      <MotionComponent className={cn('whitespace-pre-wrap', className)} {...props}>
+        {children}
+      </MotionComponent>
+    )
+  }
 
   let segments: string[] = []
   switch (by) {

@@ -5,7 +5,7 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 export function FAQ() {
   return (
-    <section className="py-24 sm:py-28" id="faq">
+    <section className="py-16 sm:py-24 lg:py-28" id="faq">
       <Container>
         <SectionHeading
           eyebrow="FAQ"
@@ -13,7 +13,7 @@ export function FAQ() {
           description="From Jummah details to prayer room access and volunteer opportunities, here are the essentials in one place."
         />
 
-        <div className="mt-12">
+        <div className="mt-8 sm:mt-12">
           <Accordion items={faqItems} />
         </div>
       </Container>

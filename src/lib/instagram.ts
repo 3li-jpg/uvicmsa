@@ -7,6 +7,7 @@ const INSTAGRAM_HEADERS = {
 
 const APP_ID_PATTERN = /appId":"(\d+)"/
 const CSRF_PATTERN = /"csrf_token":"([^"]+)"/
+const INSTAGRAM_TIMEOUT_MS = 6500
 
 type InstagramFeedItem = {
   id: string
@@ -16,8 +17,45 @@ type InstagramFeedItem = {
   link: string
 }
 
+type InstagramCandidate = {
+  height?: number
+  url?: string
+  width?: number
+}
+
+type InstagramTimelineItem = {
+  id?: string
+  code?: string
+  media_type?: number
+  caption?: { text?: string }
+  image_versions2?: { candidates?: InstagramCandidate[] }
+  product_type?: string
+}
+
+type InstagramTimelineResponse = {
+  items?: InstagramTimelineItem[]
+}
+
+type InstagramFetchOptions = RequestInit & {
+  next?: { revalidate: number }
+}
+
+async function fetchWithTimeout(url: string, options: InstagramFetchOptions) {
+  const controller = new AbortController()
+  const timeout = setTimeout(() => controller.abort(), INSTAGRAM_TIMEOUT_MS)
+
+  try {
+    return await fetch(url, {
+      ...options,
+      signal: controller.signal,
+    })
+  } finally {
+    clearTimeout(timeout)
+  }
+}
+
 async function getInstagramProfileHtml() {
-  const response = await fetch(externalLinks.instagram, {
+  const response = await fetchWithTimeout(externalLinks.instagram, {
     headers: INSTAGRAM_HEADERS,
     next: { revalidate: 3600 },
   })
@@ -41,7 +79,7 @@ function extractAuthTokens(html: string) {
 }
 
 async function fetchTimelineItems(appId: string, csrfToken: string) {
-  const response = await fetch('https://www.instagram.com/api/v1/feed/user/uvicmsa/username/?count=6', {
+  const response = await fetchWithTimeout('https://www.instagram.com/api/v1/feed/user/uvicmsa/username/?count=6', {
     headers: {
       ...INSTAGRAM_HEADERS,
       Referer: externalLinks.instagram,
@@ -55,16 +93,8 @@ async function fetchTimelineItems(appId: string, csrfToken: string) {
     throw new Error(`Instagram timeline request failed: ${response.status}`)
   }
 
-  return response.json() as Promise<{
-    items?: Array<{
-      id: string
-      code: string
-      media_type?: number
-      caption?: { text?: string }
-      image_versions2?: { candidates?: Array<{ url?: string }> }
-      product_type?: string
-    }>
-  }>
+  const timeline = (await response.json()) as InstagramTimelineResponse
+  return Array.isArray(timeline.items) ? timeline.items : []
 }
 
 function buildPostLink(item: { code: string; product_type?: string }) {
@@ -72,23 +102,48 @@ function buildPostLink(item: { code: string; product_type?: string }) {
   return `https://www.instagram.com/${kind}/${item.code}/`
 }
 
+function getBestImageUrl(candidates: InstagramCandidate[] | undefined) {
+  return candidates
+    ?.filter((candidate) => candidate.url)
+    .sort((a, b) => (b.width ?? 0) - (a.width ?? 0))[0]
+    ?.url
+}
+
+function normalizePost(item: InstagramTimelineItem): InstagramFeedItem | undefined {
+  if (!item.id || !item.code) {
+    return undefined
+  }
+
+  const imageUrl = getBestImageUrl(item.image_versions2?.candidates)
+
+  if (!imageUrl) {
+    return undefined
+  }
+
+  return {
+    id: item.id,
+    code: item.code,
+    caption: item.caption?.text?.trim() || 'Latest post from @uvicmsa',
+    imageUrl,
+    link: buildPostLink({ code: item.code, product_type: item.product_type }),
+  }
+}
+
 export async function getLatestInstagramPosts(): Promise<InstagramFeedItem[]> {
   try {
     const html = await getInstagramProfileHtml()
     const { appId, csrfToken } = extractAuthTokens(html)
-    const timeline = await fetchTimelineItems(appId, csrfToken)
+    const timelineItems = await fetchTimelineItems(appId, csrfToken)
 
-    return (timeline.items ?? [])
-      .filter((item) => item.code && item.image_versions2?.candidates?.[0]?.url)
+    return timelineItems
+      .map(normalizePost)
+      .filter((post): post is InstagramFeedItem => Boolean(post))
       .slice(0, 3)
-      .map((item) => ({
-        id: item.id,
-        code: item.code,
-        caption: item.caption?.text?.trim() || 'Latest post from @uvicmsa',
-        imageUrl: item.image_versions2!.candidates![0].url!,
-        link: buildPostLink(item),
-      }))
-  } catch {
+  } catch (error) {
+    if (process.env.NODE_ENV !== 'production') {
+      console.warn('Unable to load Instagram posts', error instanceof Error ? error.message : error)
+    }
+
     return []
   }
 }
