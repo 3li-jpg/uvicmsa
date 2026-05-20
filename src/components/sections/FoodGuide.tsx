@@ -34,7 +34,8 @@ export function FoodGuide() {
             <div className="mt-6 grid gap-3 sm:mt-8 sm:grid-cols-2">
               {restaurants.map((place) => (
                 <a className="rounded-[1.35rem] border border-white/75 bg-white/78 px-4 py-4 text-sm text-deep shadow-[0_10px_24px_rgba(93,123,162,0.1)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/92 dark:border-white/10 dark:bg-white/[0.08] dark:text-ivory/90 dark:hover:bg-white/[0.12]" href={place.mapUrl} key={place.name} rel="noreferrer" target="_blank">
-                  <span className="block font-medium">{place.name}</span>                </a>
+                  <span className="block font-medium">{place.name}</span>
+                </a>
               ))}
             </div>
           </Card>
@@ -52,7 +53,8 @@ export function FoodGuide() {
             <div className="mt-6 grid gap-3 sm:mt-8">
               {markets.map((place) => (
                 <a className="rounded-[1.35rem] border border-white/75 bg-white/78 px-4 py-4 text-sm text-deep shadow-[0_10px_24px_rgba(93,123,162,0.1)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/92 dark:border-white/10 dark:bg-white/[0.08] dark:text-ivory/90 dark:hover:bg-white/[0.12]" href={place.mapUrl} key={place.name} rel="noreferrer" target="_blank">
-                  <span className="block font-medium">{place.name}</span>                </a>
+                  <span className="block font-medium">{place.name}</span>
+                </a>
               ))}
             </div>
           </Card>

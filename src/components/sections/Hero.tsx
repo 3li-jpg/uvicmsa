@@ -16,22 +16,22 @@ export function Hero() {
               as="h1"
               animation="blurInUp"
               by="word"
-              className="mt-4 max-w-4xl font-display text-[2.75rem] font-bold leading-[0.95] tracking-[-0.055em] text-deep dark:text-ivory sm:mt-6 sm:text-6xl sm:leading-[0.9] sm:tracking-[-0.075em] lg:text-7xl xl:text-[5.4rem] xl:leading-[0.9]"
+              className="mt-3 max-w-4xl font-display text-[2.2rem] font-semibold leading-[1.02] tracking-[-0.035em] text-deep dark:text-ivory sm:mt-6 sm:text-6xl sm:font-bold sm:leading-[0.9] sm:tracking-[-0.075em] lg:text-7xl xl:text-[5.4rem] xl:leading-[0.9]"
               duration={0.7}
               once
               startOnView={false}
             >
               {heroContent.title}
             </TextAnimate>
-            <p className="mt-4 max-w-xl text-base leading-7 text-body/80 dark:text-ivory/90 sm:mt-7 sm:max-w-2xl sm:text-xl sm:leading-8">
+            <p className="mt-4 max-w-xl text-sm leading-6 text-body/80 dark:text-ivory/90 sm:mt-7 sm:max-w-2xl sm:text-xl sm:leading-8">
               {heroContent.description}
             </p>
 
-            <div className="mt-6 grid w-full max-w-sm grid-cols-2 gap-3 sm:mt-10 sm:max-w-md sm:gap-4 lg:flex lg:w-auto lg:max-w-none lg:justify-start">
-              <Button className="w-full px-3 text-[0.8rem] sm:px-6 sm:text-sm" href="#contact">
+            <div className="mt-5 grid w-full max-w-xs grid-cols-2 gap-2.5 sm:mt-10 sm:max-w-md sm:gap-4 lg:flex lg:w-auto lg:max-w-none lg:justify-start">
+              <Button className="min-h-10 w-full rounded-[1.25rem] px-3 py-2 text-[0.75rem] leading-tight sm:min-h-11 sm:rounded-full sm:px-6 sm:py-3 sm:text-sm" href="#contact">
                 {heroContent.primaryCta}
               </Button>
-              <Button className="w-full px-3 text-[0.8rem] sm:px-6 sm:text-sm" href="#prayer" variant="secondary">
+              <Button className="min-h-10 w-full rounded-[1.25rem] px-3 py-2 text-[0.75rem] leading-tight sm:min-h-11 sm:rounded-full sm:px-6 sm:py-3 sm:text-sm" href="#prayer" variant="secondary">
                 {heroContent.secondaryCta}
               </Button>
             </div>

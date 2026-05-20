@@ -3,7 +3,6 @@ import { prayerInfo } from '../../content/prayer'
 import { Container } from '../ui/Container'
 import { Card } from '../ui/Card'
 import { SectionHeading } from '../ui/SectionHeading'
-import { TextAnimate } from '../ui/TextAnimate'
 
 export function PrayerSection() {
   return (
@@ -11,11 +10,7 @@ export function PrayerSection() {
       <Container>
         <SectionHeading
           eyebrow="Prayer at UVic"
-          title={
-            <TextAnimate animation="blurInUp" as="span" by="word" duration={0.65} once>
-              A calm, central place for prayer and gathering throughout the week.
-            </TextAnimate>
-          }
+          title="A calm, central place for prayer and gathering throughout the week."
           description="Prayer is at the heart of the UVic MSA experience. This section brings together Jummah details, prayer room access, and the key information students need most often."
         />
 
@@ -26,9 +21,7 @@ export function PrayerSection() {
                 <div>
                   <p className="text-sm uppercase tracking-[0.24em] text-ivory/60">{prayerInfo.jummahTitle}</p>
                   <h3 className="mt-4 font-display text-3xl font-bold tracking-[-0.06em] sm:text-4xl">
-                    <TextAnimate animation="blurInUp" as="span" by="word" duration={0.45} once>
-                      Jummah Prayer
-                    </TextAnimate>
+                    Jummah Prayer
                   </h3>
                 </div>
                 <div className="rounded-full border border-white/12 bg-white/10 px-4 py-2 text-sm text-ivory/80 backdrop-blur-xl">

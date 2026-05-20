@@ -105,19 +105,19 @@ export function Navbar() {
   }, [isOpen])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 pt-4 sm:pt-6">
+    <header className="fixed inset-x-0 top-0 z-50 pt-3 sm:pt-6">
       <Container>
         <div
           className={cn(
-            'mx-auto flex w-full items-center justify-between rounded-full border border-white/80 bg-white/72 px-4 py-3 shadow-glow backdrop-blur-md transition-all duration-300 dark:border-white/10 dark:bg-[#162235]/78 dark:shadow-[0_24px_70px_rgba(0,0,0,0.34)] sm:px-6',
+            'mx-auto flex w-full items-center justify-between rounded-[1.5rem] border border-white/80 bg-white/72 px-3 py-2 shadow-glow backdrop-blur-md transition-all duration-300 dark:border-white/10 dark:bg-[#162235]/78 dark:shadow-[0_24px_70px_rgba(0,0,0,0.34)] sm:rounded-full sm:px-6 sm:py-3',
             isScrolled && 'bg-white/84 dark:bg-[#162235]/88',
           )}
         >
           <Link
-            className="flex items-center gap-3 rounded-full px-2 py-1 text-sm font-semibold tracking-[0.12em] text-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest dark:text-ivory"
+            className="flex items-center gap-3 rounded-full px-1.5 py-1 text-sm font-semibold tracking-[0.12em] text-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest dark:text-ivory sm:px-2"
             href="/#home"
           >
-            <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-white/80 p-1 shadow-soft dark:bg-white/90">
+            <span className="flex h-9 w-9 items-center justify-center overflow-hidden rounded-full bg-white/80 p-1 shadow-soft dark:bg-white/90 sm:h-10 sm:w-10">
               <Image alt="UVic MSA logo mark" className="h-full w-full object-contain" height={40} src="/uvic-msa-logo-mark.png" width={40} />
             </span>
           </Link>
@@ -148,12 +148,12 @@ export function Navbar() {
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <AnimatedThemeToggler variant="circle" />
+            <AnimatedThemeToggler className="h-11 w-11 rounded-[1.35rem] sm:h-12 sm:w-12 sm:rounded-full" variant="circle" />
             <button
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
-              className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/75 bg-white/72 text-deep shadow-soft transition-all duration-300 hover:bg-white/88 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest dark:border-white/10 dark:bg-white/10 dark:text-ivory dark:hover:bg-white/16"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-[1.35rem] border border-white/75 bg-white/72 text-deep shadow-soft transition-all duration-300 hover:bg-white/88 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest dark:border-white/10 dark:bg-white/10 dark:text-ivory dark:hover:bg-white/16 sm:h-12 sm:w-12 sm:rounded-full"
               onClick={() => setIsOpen((open) => !open)}
               ref={menuButtonRef}
               type="button"
