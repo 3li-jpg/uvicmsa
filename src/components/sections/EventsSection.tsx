@@ -7,7 +7,7 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 export function EventsSection() {
   return (
-    <section className="py-16 sm:py-24 lg:py-28" id="events">
+    <section className="py-12 sm:py-24 lg:py-28" id="events">
       <Container>
         <BlurFade inView offset={18}>
           <SectionHeading

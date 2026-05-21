@@ -6,7 +6,7 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 export function PrayerSection() {
   return (
-    <section className="py-16 sm:py-24 lg:py-28" id="prayer">
+    <section className="py-12 sm:py-24 lg:py-28" id="prayer">
       <Container>
         <SectionHeading
           eyebrow="Prayer at UVic"

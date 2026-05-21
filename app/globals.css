@@ -142,6 +142,24 @@ html[data-magicui-theme-vt='active']::view-transition-group(root) {
   animation-duration: var(--magicui-theme-toggle-vt-duration);
 }
 
+@media (max-width: 767px) {
+  .landing-page,
+  .landing-page *,
+  .landing-page *::before,
+  .landing-page *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .mobile-menu-panel {
+    transition: opacity 280ms ease, transform 280ms ease !important;
+  }
+
+  .mobile-menu-link {
+    transition: opacity 260ms ease, transform 260ms ease, background-color 200ms ease !important;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

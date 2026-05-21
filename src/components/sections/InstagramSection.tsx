@@ -13,7 +13,7 @@ export async function InstagramSection() {
   const posts = await getLatestInstagramPosts()
 
   return (
-    <section className="py-16 sm:py-24 lg:py-28" id="instagram">
+    <section className="py-12 sm:py-24 lg:py-28" id="instagram">
       <Container>
         <SectionHeading
           eyebrow="Instagram"

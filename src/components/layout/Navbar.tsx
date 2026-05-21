@@ -109,7 +109,7 @@ export function Navbar() {
       <Container>
         <div
           className={cn(
-            'mx-auto flex w-full items-center justify-between rounded-[1.5rem] border border-white/80 bg-white/72 px-3 py-2 shadow-glow backdrop-blur-md transition-all duration-300 dark:border-white/10 dark:bg-[#162235]/78 dark:shadow-[0_24px_70px_rgba(0,0,0,0.34)] sm:rounded-full sm:px-6 sm:py-3',
+            'mx-auto flex w-full items-center justify-between rounded-[1.5rem] border border-white/80 bg-white/72 px-3 py-2 shadow-glow backdrop-blur-md dark:border-white/10 dark:bg-[#162235]/78 dark:shadow-[0_24px_70px_rgba(0,0,0,0.34)] sm:rounded-full sm:px-6 sm:py-3 lg:transition-all lg:duration-300',
             isScrolled && 'bg-white/84 dark:bg-[#162235]/88',
           )}
         >
@@ -153,7 +153,7 @@ export function Navbar() {
               aria-controls="mobile-menu"
               aria-expanded={isOpen}
               aria-label={isOpen ? 'Close menu' : 'Open menu'}
-              className="inline-flex h-11 w-11 items-center justify-center rounded-[1.35rem] border border-white/75 bg-white/72 text-deep shadow-soft transition-all duration-300 hover:bg-white/88 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest dark:border-white/10 dark:bg-white/10 dark:text-ivory dark:hover:bg-white/16 sm:h-12 sm:w-12 sm:rounded-full"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-[1.35rem] border border-white/75 bg-white/72 text-deep shadow-soft hover:bg-white/88 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest dark:border-white/10 dark:bg-white/10 dark:text-ivory dark:hover:bg-white/16 sm:h-12 sm:w-12 sm:rounded-full lg:transition-all lg:duration-300"
               onClick={() => setIsOpen((open) => !open)}
               ref={menuButtonRef}
               type="button"
@@ -169,25 +169,37 @@ export function Navbar() {
         aria-label="Mobile navigation"
         aria-modal="true"
         className={cn(
-          'fixed inset-0 z-40 h-dvh overflow-y-auto overscroll-contain bg-[linear-gradient(180deg,rgba(248,245,239,0.95),rgba(238,243,248,0.98))] px-5 pb-[calc(2rem+env(safe-area-inset-bottom))] pt-24 transition-all duration-500 dark:bg-[linear-gradient(180deg,rgba(16,26,42,0.95),rgba(22,34,53,0.98))] sm:px-6 sm:pt-28 lg:hidden',
-          isOpen ? 'visible opacity-100' : 'pointer-events-none invisible opacity-0',
+          'mobile-menu-panel fixed inset-0 z-40 h-dvh overflow-y-auto overscroll-contain bg-[linear-gradient(180deg,rgba(248,245,239,0.95),rgba(238,243,248,0.98))] px-5 pb-[calc(2rem+env(safe-area-inset-bottom))] pt-24 dark:bg-[linear-gradient(180deg,rgba(16,26,42,0.95),rgba(22,34,53,0.98))] sm:px-6 sm:pt-28 lg:hidden',
+          isOpen ? 'opacity-100 translate-y-0' : 'pointer-events-none opacity-0 -translate-y-3',
         )}
         id="mobile-menu"
         ref={mobileMenuRef}
         role="dialog"
       >
         <Container className="flex min-h-full flex-col gap-6 px-0">
+          <div className="flex justify-end">
+            <button
+              aria-label="Close menu"
+              className="inline-flex h-11 w-11 items-center justify-center rounded-[1.35rem] border border-white/75 bg-white/72 text-deep shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest dark:border-white/10 dark:bg-white/10 dark:text-ivory sm:h-12 sm:w-12 sm:rounded-full"
+              onClick={() => setIsOpen(false)}
+              tabIndex={isOpen ? undefined : -1}
+              type="button"
+            >
+              <X className="h-5 w-5" />
+            </button>
+          </div>
+
           <nav aria-label="Mobile" className="space-y-2 sm:space-y-3">
             {navItems.map((item, index) => (
               <Link
                 className={cn(
-                  'block rounded-[1.5rem] border border-white/80 bg-white/72 px-5 py-4 font-display text-xl font-bold tracking-[-0.04em] text-deep shadow-soft backdrop-blur-md transition-all duration-500 dark:border-white/10 dark:bg-white/8 dark:text-ivory sm:rounded-[1.75rem] sm:py-5 sm:text-2xl',
-                  isOpen ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0',
+                  'mobile-menu-link block rounded-[1.5rem] border border-white/80 bg-white/72 px-5 py-4 font-display text-xl font-bold tracking-[-0.04em] text-deep shadow-soft backdrop-blur-md dark:border-white/10 dark:bg-white/8 dark:text-ivory sm:rounded-[1.75rem] sm:py-5 sm:text-2xl',
+                  isOpen ? 'translate-y-0 opacity-100' : 'translate-y-3 opacity-0',
                 )}
                 href={item.href}
                 key={item.id}
                 onClick={() => setIsOpen(false)}
-                style={{ transitionDelay: isOpen ? `${index * 60}ms` : '0ms' }}
+                style={{ transitionDelay: isOpen ? `${index * 45}ms` : '0ms' }}
                 tabIndex={isOpen ? undefined : -1}
               >
                 {item.label}

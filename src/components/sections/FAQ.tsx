@@ -5,7 +5,7 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 export function FAQ() {
   return (
-    <section className="py-16 sm:py-24 lg:py-28" id="faq">
+    <section className="py-12 sm:py-24 lg:py-28" id="faq">
       <Container>
         <SectionHeading
           eyebrow="FAQ"

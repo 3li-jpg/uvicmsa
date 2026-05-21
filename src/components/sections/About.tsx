@@ -24,7 +24,7 @@ const values = [
 
 export function About() {
   return (
-    <section className="py-16 sm:py-24 lg:py-28" id="about">
+    <section className="py-12 sm:py-24 lg:py-28" id="about">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)] lg:gap-14">
           <BlurFade inView offset={18}>

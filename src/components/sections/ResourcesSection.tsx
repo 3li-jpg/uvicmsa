@@ -47,7 +47,7 @@ const quickLinks = [
 
 export function ResourcesSection() {
   return (
-    <section className="py-16 sm:py-24 lg:py-28" id="resources">
+    <section className="py-12 sm:py-24 lg:py-28" id="resources">
       <Container>
         <BlurFade inView offset={18}>
           <SectionHeading

@@ -4,7 +4,7 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 export function TeamSection() {
   return (
-    <section className="py-16 sm:py-24 lg:py-28" id="team">
+    <section className="py-12 sm:py-24 lg:py-28" id="team">
       <Container>
         <SectionHeading
           eyebrow="Current team"

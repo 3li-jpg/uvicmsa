@@ -9,7 +9,7 @@ const markets = foodGuide.filter((place) => place.category === 'Market')
 
 export function FoodGuide() {
   return (
-    <section className="py-16 sm:py-24 lg:py-28" id="food">
+    <section className="py-12 sm:py-24 lg:py-28" id="food">
       <Container>
         <SectionHeading
           eyebrow="Halal food around UVic"
