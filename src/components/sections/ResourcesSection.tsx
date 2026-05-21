@@ -69,9 +69,12 @@ export function ResourcesSection() {
                 <p className="mt-4 max-w-3xl text-sm leading-7 text-ivory/80 sm:text-base">{ruhContent.detail}</p>
               </div>
 
-              <div className="lg:pb-1">
-                <Button href={ruhContent.href} rel="noreferrer" target="_blank">
+              <div className="flex flex-col items-stretch gap-3 sm:flex-row lg:flex-col lg:items-end lg:pb-1">
+                <Button className="w-full sm:w-40" href={ruhContent.href} rel="noreferrer" target="_blank">
                   {ruhContent.ctaLabel}
+                </Button>
+                <Button className="w-full !border-white/30 !bg-white/[0.08] !text-ivory hover:!bg-white/[0.14] sm:w-40" href="/ruh" variant="secondary">
+                  Learn More
                 </Button>
               </div>
             </div>
