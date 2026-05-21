@@ -36,7 +36,7 @@ const steps = [
   'Use your student insurance benefits when booking care through Ruh.',
 ] as const
 
-export default function RuhPage() {
+export default function CounsellingPage() {
   return (
     <div className="relative overflow-x-clip bg-ivory text-body dark:bg-[#101a2a] dark:text-ivory/95">
       <a className="skip-link" href="#main-content">

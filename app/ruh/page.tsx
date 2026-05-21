@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation'
 
-export default function RuhCounsellingPage() {
+export default function RuhPage() {
   redirect('/counselling')
 }

@@ -73,7 +73,7 @@ export function ResourcesSection() {
                 <Button className="w-full sm:w-40" href={ruhContent.href} rel="noreferrer" target="_blank">
                   {ruhContent.ctaLabel}
                 </Button>
-                <Button className="w-full !border-white/30 !bg-white/[0.08] !text-ivory hover:!bg-white/[0.14] sm:w-40" href="/ruh" variant="secondary">
+                <Button className="w-full !border-white/30 !bg-white/[0.08] !text-ivory hover:!bg-white/[0.14] sm:w-40" href="/counselling" variant="secondary">
                   Learn More
                 </Button>
               </div>
