@@ -77,15 +77,15 @@ export default function CounsellingPage() {
                 </div>
               </Card>
 
-              <Card className="border-white/10 bg-white/[0.06] p-6 text-ivory sm:p-8">
-                <p className="text-sm uppercase tracking-[0.2em] text-ivory/70">How it works</p>
+              <Card className="p-6 dark:border-white/10 dark:bg-white/[0.06] sm:p-8">
+                <p className="text-sm uppercase tracking-[0.2em] text-body/55 dark:text-ivory/70">How it works</p>
                 <ol className="mt-6 space-y-5">
                   {steps.map((step, index) => (
                     <li className="flex gap-4" key={step}>
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/12 text-base font-bold leading-8 text-ivory/80 sm:text-lg">
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sage text-base font-bold leading-8 text-deep sm:text-lg dark:bg-white/12 dark:text-ivory/80">
                         {index + 1}
                       </span>
-                      <p className="text-base leading-8 text-ivory/80 sm:text-lg">{step}</p>
+                      <p className="text-base leading-8 text-body/80 dark:text-ivory/80 sm:text-lg">{step}</p>
                     </li>
                   ))}
                 </ol>
@@ -100,25 +100,25 @@ export default function CounsellingPage() {
               {highlights.map((item) => {
                 const Icon = item.icon
                 return (
-                  <Card className="border-white/10 bg-white/[0.06] p-6 text-ivory sm:p-7" key={item.title}>
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/[0.12] text-ivory shadow-soft">
+                  <Card className="p-6 dark:border-white/10 dark:bg-white/[0.06] sm:p-7" key={item.title}>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sage text-deep shadow-soft dark:bg-white/[0.12] dark:text-ivory">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <h2 className="mt-5 font-display text-2xl font-bold tracking-[-0.05em] text-ivory">{item.title}</h2>
-                    <p className="mt-4 text-sm leading-7 text-ivory/88">{item.description}</p>
+                    <h2 className="mt-5 font-display text-2xl font-bold tracking-[-0.05em] text-deep dark:text-ivory">{item.title}</h2>
+                    <p className="mt-4 text-sm leading-7 text-body/80 dark:text-ivory/90">{item.description}</p>
                   </Card>
                 )
               })}
             </div>
 
-            <Card className="mt-6 border-white/10 bg-white/[0.06] p-6 text-ivory sm:p-8">
+            <Card className="mt-6 p-6 dark:border-white/10 dark:bg-white/[0.06] sm:p-8">
               <div className="grid gap-6 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:items-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white/[0.12] text-ivory shadow-soft">
+                <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sage text-deep shadow-soft dark:bg-white/[0.12] dark:text-ivory">
                   <CheckCircle2 className="h-6 w-6" />
                 </div>
                 <div>
-                  <h2 className="font-display text-3xl font-bold tracking-[-0.05em] text-ivory">Ready to connect with Ruh?</h2>
-                  <p className="mt-3 text-sm leading-7 text-ivory/88">
+                  <h2 className="font-display text-3xl font-bold tracking-[-0.05em] text-deep dark:text-ivory">Ready to connect with Ruh?</h2>
+                  <p className="mt-3 text-sm leading-7 text-body/80 dark:text-ivory/90">
                     Ruh can help you explore Muslim mental health support and understand how student coverage may apply.
                   </p>
                 </div>

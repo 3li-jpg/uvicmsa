@@ -1,0 +1,2560 @@
+{
+  "version": "2.11",
+  "children": [
+    {
+      "type": "frame",
+      "id": "h4JNu",
+      "x": 960,
+      "y": 0,
+      "name": "Instagram Post Template - UVic MSA 4x5",
+      "clip": true,
+      "width": 1080,
+      "height": 1350,
+      "fill": {
+        "type": "gradient",
+        "gradientType": "linear",
+        "enabled": true,
+        "rotation": 180,
+        "size": {
+          "height": 1
+        },
+        "colors": [
+          {
+            "color": "$uvic-ivory",
+            "position": 0
+          },
+          {
+            "color": "$uvic-sand",
+            "position": 0.55
+          },
+          {
+            "color": "$uvic-ivory",
+            "position": 1
+          }
+        ]
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "Nzpe7",
+          "x": 72,
+          "y": 64,
+          "name": "Glass Header",
+          "width": 936,
+          "height": 116,
+          "fill": "#FFFFFFCC",
+          "cornerRadius": 58,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FFFFFFE6"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#5D7BA229",
+            "offset": {
+              "x": 0,
+              "y": 24
+            },
+            "blur": 70
+          },
+          "padding": [
+            18,
+            26
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "sUEsa",
+              "name": "Brand Lockup",
+              "fill": "#FFFFFF00",
+              "gap": 18,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "k9MaL",
+                  "name": "Logo Circle",
+                  "width": 72,
+                  "height": 72,
+                  "fill": "#FFFFFFE6",
+                  "cornerRadius": 36,
+                  "effect": {
+                    "type": "shadow",
+                    "shadowType": "outer",
+                    "color": "#5D7BA220",
+                    "offset": {
+                      "x": 0,
+                      "y": 12
+                    },
+                    "blur": 34
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 27,
+                      "id": "kcSVK",
+                      "name": "UVic MSA Logo Mark",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "public/uvic-msa-logo-mark.png",
+                        "mode": "fit"
+                      },
+                      "width": 54,
+                      "height": 54
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dfPlc",
+                  "name": "Brand Text",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "e5sgMu",
+                      "fill": "$uvic-deep",
+                      "content": "UVIC MSA",
+                      "fontFamily": "$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "r90pv",
+                      "fill": "#35425699",
+                      "content": "Muslim Students' Association",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 15,
+                      "fontWeight": "500",
+                      "letterSpacing": 1.8
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "k6JyK",
+              "name": "Handle",
+              "fill": "$uvic-forest",
+              "content": "@uvicmsa",
+              "fontFamily": "$font-sans",
+              "fontSize": 24,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "DkYzw",
+          "x": 72,
+          "y": 228,
+          "name": "Main Announcement Panel",
+          "width": 936,
+          "height": 608,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 135,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#1F2B3DF5",
+                "position": 0
+              },
+              {
+                "color": "#6E8FB6D9",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 42,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FFFFFF4D"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#5D7BA23D",
+            "offset": {
+              "x": 0,
+              "y": 28
+            },
+            "blur": 90
+          },
+          "layout": "vertical",
+          "gap": 30,
+          "padding": [
+            54,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Oeqdr",
+              "name": "Hero Top Row",
+              "width": "fill_container",
+              "fill": "#FFFFFF00",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "r8R1J",
+                  "name": "Post Type Badge",
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF2E"
+                  },
+                  "padding": [
+                    12,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "thiNg",
+                      "fill": "#F8F5EFD9",
+                      "content": "PRAYER",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": 3.8
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "y6HnsD",
+                  "fill": "#F8F5EFB8",
+                  "content": "EVERY FRIDAY",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 18,
+                  "fontWeight": "600",
+                  "letterSpacing": 3.2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "afedF",
+              "name": "Headline Block",
+              "width": "fill_container",
+              "fill": "#FFFFFF00",
+              "layout": "vertical",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "lqHBD",
+                  "name": "Editable Headline",
+                  "fill": "$uvic-ivory",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Jummah Prayer",
+                  "lineHeight": 0.9,
+                  "fontFamily": "$font-display",
+                  "fontSize": 104,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "E9S77r",
+                  "name": "Editable Supporting Copy",
+                  "fill": "#F8F5EFDD",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Pause, reconnect, and gather with community in the middle of the academic week.",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 29,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "B019Z",
+              "name": "Hero Detail Cards",
+              "width": "fill_container",
+              "fill": "#FFFFFF00",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "t5hkb9",
+                  "name": "Time Card",
+                  "width": "fill_container",
+                  "height": 158,
+                  "fill": "#FFFFFF17",
+                  "cornerRadius": 28,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF24"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "KItUv",
+                      "fill": "#FFFFFF00",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "l3JZQv",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "clock-3",
+                          "iconFontFamily": "lucide",
+                          "fill": "$uvic-gold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "Ssn4f",
+                          "fill": "#F8F5EFA6",
+                          "content": "TIME",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "letterSpacing": 2.8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "DyQLt",
+                      "fill": "$uvic-ivory",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "1:30 PM",
+                      "lineHeight": 1.03,
+                      "fontFamily": "$font-display",
+                      "fontSize": 31,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MuhuN",
+                  "name": "Location Card",
+                  "width": "fill_container",
+                  "height": 158,
+                  "fill": "#FFFFFF17",
+                  "cornerRadius": 28,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF24"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "L1ea4",
+                      "fill": "#FFFFFF00",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "Mlkv4",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "map-pin",
+                          "iconFontFamily": "lucide",
+                          "fill": "$uvic-gold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "y0Ig3",
+                          "fill": "#F8F5EFA6",
+                          "content": "LOCATION",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "letterSpacing": 2.8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "U7RbQ",
+                      "fill": "$uvic-ivory",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "UVic Multifaith Centre",
+                      "lineHeight": 1.03,
+                      "fontFamily": "$font-display",
+                      "fontSize": 31,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "dpObS",
+          "x": 72,
+          "y": 880,
+          "name": "Lower Content",
+          "width": 936,
+          "height": 328,
+          "fill": "#FFFFFF00",
+          "gap": 22,
+          "children": [
+            {
+              "type": "frame",
+              "id": "e1LboY",
+              "name": "Editable Info Card",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#FFFFFFC9",
+              "cornerRadius": 34,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FFFFFFE6"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#5D7BA21F",
+                "offset": {
+                  "x": 0,
+                  "y": 18
+                },
+                "blur": 48
+              },
+              "layout": "vertical",
+              "gap": 18,
+              "padding": 30,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Otbve",
+                  "fill": "#35425680",
+                  "content": "WHAT TO KNOW",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "letterSpacing": 3.4
+                },
+                {
+                  "type": "text",
+                  "id": "S041GJ",
+                  "name": "Editable Body",
+                  "fill": "$uvic-body",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Bring your prayer mat if you can. Follow @uvicmsa for weekly updates, room notes, and community reminders.",
+                  "lineHeight": 1.28,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "p8ILO",
+                  "name": "CTA Pill",
+                  "fill": "$uvic-deep",
+                  "cornerRadius": 999,
+                  "gap": 12,
+                  "padding": [
+                    15,
+                    22
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "M0PMTG",
+                      "fill": "$uvic-ivory",
+                      "content": "Join the community",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "RdYDH",
+                      "width": 22,
+                      "height": 22,
+                      "iconFontName": "arrow-up-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "$uvic-ivory"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Bdrmj",
+              "name": "Quick Details",
+              "width": 318,
+              "height": "fill_container",
+              "fill": "#D7E6F2C9",
+              "cornerRadius": 34,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FFFFFFCC"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#5D7BA21A",
+                "offset": {
+                  "x": 0,
+                  "y": 18
+                },
+                "blur": 48
+              },
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 26,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "JGBN8",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Easm5",
+                      "fill": "#35425680",
+                      "content": "ROOM",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 2.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "TbgGx",
+                      "fill": "$uvic-deep",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Sedgewick C125",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-display",
+                      "fontSize": 25,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "MlMSo",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "HbjOe",
+                      "fill": "#35425680",
+                      "content": "ACCESS",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 2.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "ZLAgo",
+                      "fill": "$uvic-deep",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "DM for code",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-display",
+                      "fontSize": 25,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "YaHNF",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "YAWey",
+                      "fill": "#35425680",
+                      "content": "UPDATES",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 2.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "KEio0",
+                      "fill": "$uvic-deep",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Discord + IG",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-display",
+                      "fontSize": 25,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "lkHTx",
+          "x": 72,
+          "y": 1244,
+          "name": "Footer Strip",
+          "width": 936,
+          "height": 54,
+          "fill": "#FFFFFF00",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "S0VXuA",
+              "fill": "#354256B8",
+              "content": "Faith, community, and student life at UVic",
+              "fontFamily": "$font-sans",
+              "fontSize": 20,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "w67EKJ",
+              "fill": "$uvic-deep",
+              "content": "linktr.ee/uvicmsa",
+              "fontFamily": "$font-sans",
+              "fontSize": 20,
+              "fontWeight": "700"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "y89pf",
+      "x": 2200,
+      "y": 0,
+      "name": "UVic MSA Instagram Template Components",
+      "width": 360,
+      "height": 520,
+      "fill": "#EEF3F8",
+      "cornerRadius": 32,
+      "stroke": {
+        "thickness": 1,
+        "fill": "#FFFFFF"
+      },
+      "layout": "vertical",
+      "gap": 22,
+      "padding": 24,
+      "children": [
+        {
+          "type": "text",
+          "id": "OXEHX",
+          "fill": "$uvic-deep",
+          "textGrowth": "fixed-width",
+          "width": "fill_container",
+          "content": "Reusable post parts",
+          "lineHeight": 1.05,
+          "fontFamily": "$font-display",
+          "fontSize": 28,
+          "fontWeight": "700"
+        },
+        {
+          "type": "frame",
+          "id": "H4hvso",
+          "name": "component/Post Type Badge",
+          "reusable": true,
+          "fill": "#FFFFFFCC",
+          "cornerRadius": 999,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FFFFFF"
+          },
+          "padding": [
+            12,
+            20
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "yCSJp",
+              "name": "Badge Label",
+              "fill": "$uvic-forest",
+              "content": "EVENT",
+              "fontFamily": "$font-sans",
+              "fontSize": 16,
+              "fontWeight": "700",
+              "letterSpacing": 3
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "kXd31",
+          "name": "component/Detail Card",
+          "reusable": true,
+          "width": "fill_container",
+          "height": 128,
+          "fill": "#FFFFFFCC",
+          "cornerRadius": 28,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FFFFFF"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#5D7BA21F",
+            "offset": {
+              "x": 0,
+              "y": 14
+            },
+            "blur": 36
+          },
+          "layout": "vertical",
+          "gap": 12,
+          "padding": 22,
+          "children": [
+            {
+              "type": "frame",
+              "id": "iV2zX",
+              "fill": "#FFFFFF00",
+              "gap": 10,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "icon_font",
+                  "id": "GWojw",
+                  "width": 22,
+                  "height": 22,
+                  "iconFontName": "calendar-days",
+                  "iconFontFamily": "lucide",
+                  "fill": "$uvic-forest"
+                },
+                {
+                  "type": "text",
+                  "id": "cvPwy",
+                  "name": "Detail Label",
+                  "fill": "#35425680",
+                  "content": "LABEL",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 13,
+                  "fontWeight": "700",
+                  "letterSpacing": 2.4
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "D15ejQ",
+              "name": "Detail Value",
+              "fill": "$uvic-deep",
+              "textGrowth": "fixed-width",
+              "width": "fill_container",
+              "content": "Editable value",
+              "lineHeight": 1.05,
+              "fontFamily": "$font-display",
+              "fontSize": 25,
+              "fontWeight": "700"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "v62EU",
+          "name": "component/CTA Pill",
+          "reusable": true,
+          "fill": "$uvic-deep",
+          "cornerRadius": 999,
+          "gap": 10,
+          "padding": [
+            14,
+            20
+          ],
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "DEDnk",
+              "name": "CTA Label",
+              "fill": "$uvic-ivory",
+              "content": "Call to action",
+              "fontFamily": "$font-sans",
+              "fontSize": 18,
+              "fontWeight": "600"
+            },
+            {
+              "type": "icon_font",
+              "id": "R7OaD",
+              "width": 20,
+              "height": 20,
+              "iconFontName": "arrow-up-right",
+              "iconFontFamily": "lucide",
+              "fill": "$uvic-ivory"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "lT0Rj",
+      "x": 2740,
+      "y": 0,
+      "name": "Instagram Post - Eid Party June 6",
+      "clip": true,
+      "width": 1080,
+      "height": 1350,
+      "fill": [
+        {
+          "type": "gradient",
+          "gradientType": "linear",
+          "enabled": true,
+          "rotation": 180,
+          "size": {
+            "height": 1
+          },
+          "colors": [
+            {
+              "color": "#263142",
+              "position": 0
+            },
+            {
+              "color": "#EEF3F8",
+              "position": 0.52
+            },
+            {
+              "color": "#d9e3f2",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 1.4,
+            "height": 0.62
+          },
+          "colors": [
+            {
+              "color": "#B7C8EA6B",
+              "position": 0
+            },
+            {
+              "color": "#B7C8EA00",
+              "position": 0.34
+            }
+          ],
+          "center": {
+            "y": 0
+          }
+        },
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 0.78,
+            "height": 0.5
+          },
+          "colors": [
+            {
+              "color": "#D7E6F2D1",
+              "position": 0
+            },
+            {
+              "color": "#D7E6F200",
+              "position": 0.24
+            }
+          ],
+          "center": {
+            "x": 0.16,
+            "y": 0.2
+          }
+        },
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 0.52,
+            "height": 0.34
+          },
+          "colors": [
+            {
+              "color": "#D38BE81A",
+              "position": 0
+            },
+            {
+              "color": "#D38BE800",
+              "position": 0.18
+            }
+          ],
+          "center": {
+            "x": 0.82,
+            "y": 0.14
+          }
+        }
+      ],
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "zKeNi",
+          "x": 72,
+          "y": 64,
+          "name": "Glass Header",
+          "width": 936,
+          "height": 116,
+          "fill": "#FFFFFFCC",
+          "cornerRadius": 58,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FFFFFFE6"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#5D7BA229",
+            "offset": {
+              "x": 0,
+              "y": 24
+            },
+            "blur": 70
+          },
+          "padding": [
+            18,
+            26
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "BQm5f",
+              "name": "UVic MSA Logo Lockup",
+              "width": 390,
+              "height": 78,
+              "fill": "#FFFFFF00",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "kiRjH",
+                  "name": "Actual UVic MSA Logo Tile",
+                  "width": 76,
+                  "height": 76,
+                  "fill": "#F8F5EF",
+                  "cornerRadius": 38,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 32,
+                      "id": "fsfpp",
+                      "name": "UVic MSA Logo Flattened",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "public/uvic-msa-logo-ivory.png",
+                        "mode": "fit"
+                      },
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "vTir9",
+                  "name": "Logo Type",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "a3sDO",
+                      "fill": "$uvic-deep",
+                      "content": "UVIC MSA",
+                      "fontFamily": "$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "arzBC",
+                      "fill": "#35425699",
+                      "content": "Muslim Students' Association",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 15,
+                      "fontWeight": "500",
+                      "letterSpacing": 1.8
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "L77DOR",
+              "name": "Handle",
+              "fill": "$uvic-forest",
+              "content": "@uvicmsa",
+              "fontFamily": "$font-sans",
+              "fontSize": 24,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "KS90o",
+          "x": 72,
+          "y": 228,
+          "name": "Main Announcement Panel",
+          "width": 936,
+          "height": 608,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 135,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#1F2B3DF7",
+                "position": 0
+              },
+              {
+                "color": "#6E8FB6E8",
+                "position": 0.58
+              },
+              {
+                "color": "#6e8fb6d9",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 42,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FFFFFF4D"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#5D7BA23D",
+            "offset": {
+              "x": 0,
+              "y": 28
+            },
+            "blur": 90
+          },
+          "layout": "vertical",
+          "gap": 30,
+          "padding": [
+            54,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "idVGc",
+              "name": "Hero Top Row",
+              "width": "fill_container",
+              "fill": "#FFFFFF00",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "O279Mc",
+                  "name": "Post Type Badge",
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF2E"
+                  },
+                  "padding": [
+                    12,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Iibph",
+                      "fill": "#F8F5EFD9",
+                      "content": "EID PARTY",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": 3.8
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "MmxmM",
+                  "fill": "#F8F5EFB8",
+                  "content": "SATURDAY · JUNE 6",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 18,
+                  "fontWeight": "600",
+                  "letterSpacing": 3.2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "V8ateY",
+              "name": "Headline Block",
+              "width": "fill_container",
+              "fill": "#FFFFFF00",
+              "layout": "vertical",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "Lpryb",
+                  "name": "Editable Headline",
+                  "fill": "$uvic-ivory",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Eid Party",
+                  "lineHeight": 0.9,
+                  "fontFamily": "$font-display",
+                  "fontSize": 104,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "Y9hkv8",
+                  "name": "Editable Supporting Copy",
+                  "fill": "#F8F5EFDD",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "BBQ, potluck, fun games, and more with the UVic MSA community.",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 29,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "CaqmW",
+              "name": "Hero Detail Cards",
+              "width": "fill_container",
+              "fill": "#FFFFFF00",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "W9mv5",
+                  "name": "Time Card",
+                  "width": "fill_container",
+                  "height": 158,
+                  "fill": "#FFFFFF17",
+                  "cornerRadius": 28,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF24"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "K2mrH",
+                      "fill": "#FFFFFF00",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "AVKTp",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "calendar-days",
+                          "iconFontFamily": "lucide",
+                          "fill": "$uvic-gold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "xhqiF",
+                          "fill": "#F8F5EFA6",
+                          "content": "DATE",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "letterSpacing": 2.8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "nPLNi",
+                      "fill": "$uvic-ivory",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "June 6",
+                      "lineHeight": 1.03,
+                      "fontFamily": "$font-display",
+                      "fontSize": 31,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "dn3hU",
+                  "name": "Location Card",
+                  "width": "fill_container",
+                  "height": 158,
+                  "fill": "#FFFFFF17",
+                  "cornerRadius": 28,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF24"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "OtPhK",
+                      "fill": "#FFFFFF00",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "lN7td",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "sparkles",
+                          "iconFontFamily": "lucide",
+                          "fill": "$uvic-gold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "sogiY",
+                          "fill": "#F8F5EFA6",
+                          "content": "FEATURING",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "letterSpacing": 2.8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "swH7d",
+                      "fill": "$uvic-ivory",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "BBQ + Potluck",
+                      "lineHeight": 1.03,
+                      "fontFamily": "$font-display",
+                      "fontSize": 31,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "HHM4H",
+          "x": 72,
+          "y": 880,
+          "name": "Lower Content",
+          "width": 936,
+          "height": 328,
+          "fill": "#FFFFFF00",
+          "gap": 22,
+          "children": [
+            {
+              "type": "frame",
+              "id": "g9P9hx",
+              "name": "Editable Info Card",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#FFFFFFC9",
+              "cornerRadius": 34,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FFFFFFE6"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#5D7BA21F",
+                "offset": {
+                  "x": 0,
+                  "y": 18
+                },
+                "blur": 48
+              },
+              "layout": "vertical",
+              "gap": 18,
+              "padding": 30,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "N10XG",
+                  "fill": "#35425680",
+                  "content": "WHAT TO BRING",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "letterSpacing": 3.4
+                },
+                {
+                  "type": "text",
+                  "id": "bmqV4",
+                  "name": "Editable Body",
+                  "fill": "$uvic-body",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Bring yourself, bring a friend, and bring a dish to share if you can. Come ready for food, games, and Eid celebration.",
+                  "lineHeight": 1.28,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "o6yw4",
+              "name": "Quick Details",
+              "width": 318,
+              "height": "fill_container",
+              "fill": "#D7E6F2D9",
+              "cornerRadius": 34,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FFFFFFCC"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#5D7BA21A",
+                "offset": {
+                  "x": 0,
+                  "y": 18
+                },
+                "blur": 48
+              },
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 26,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "o1DzQm",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wICY5",
+                      "fill": "#35425680",
+                      "content": "FOOD",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 2.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "pjuJA",
+                      "fill": "$uvic-deep",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "BBQ + Potluck",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-display",
+                      "fontSize": 25,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "fWSQP",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "D9Mahg",
+                      "fill": "#35425680",
+                      "content": "ACTIVITIES",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 2.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "wTsY9",
+                      "fill": "$uvic-deep",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Fun games",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-display",
+                      "fontSize": 25,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "IOCcf",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "B9F2p",
+                      "fill": "#35425680",
+                      "content": "MORE",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 2.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "O4V7Dw",
+                      "fill": "$uvic-deep",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "Community",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-display",
+                      "fontSize": 25,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "vej5V",
+          "x": 72,
+          "y": 1244,
+          "name": "Footer Strip",
+          "width": 936,
+          "height": 54,
+          "fill": "#FFFFFF00",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "K0nV5",
+              "fill": "#354256B8",
+              "content": "Eid Mubarak from UVic MSA",
+              "fontFamily": "$font-sans",
+              "fontSize": 20,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "qMiVP",
+              "fill": "$uvic-deep",
+              "content": "@uvicmsa",
+              "fontFamily": "$font-sans",
+              "fontSize": 20,
+              "fontWeight": "700"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "frame",
+      "id": "D8WBkk",
+      "x": 4000,
+      "y": 0,
+      "name": "Poster - Sisters Bracelet Making Night June 29",
+      "clip": true,
+      "width": 1080,
+      "height": 1350,
+      "fill": [
+        {
+          "type": "gradient",
+          "gradientType": "linear",
+          "enabled": true,
+          "rotation": 180,
+          "size": {
+            "height": 1
+          },
+          "colors": [
+            {
+              "color": "#F8F5EF",
+              "position": 0
+            },
+            {
+              "color": "#EEF3F8",
+              "position": 0.52
+            },
+            {
+              "color": "#F8F5EF",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 1.4,
+            "height": 0.62
+          },
+          "colors": [
+            {
+              "color": "#B7C8EA6B",
+              "position": 0
+            },
+            {
+              "color": "#B7C8EA00",
+              "position": 0.34
+            }
+          ],
+          "center": {
+            "y": 0
+          }
+        },
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 0.78,
+            "height": 0.5
+          },
+          "colors": [
+            {
+              "color": "#D7E6F2D1",
+              "position": 0
+            },
+            {
+              "color": "#D7E6F200",
+              "position": 0.24
+            }
+          ],
+          "center": {
+            "x": 0.16,
+            "y": 0.2
+          }
+        },
+        {
+          "type": "gradient",
+          "gradientType": "radial",
+          "enabled": true,
+          "rotation": 0,
+          "size": {
+            "width": 0.52,
+            "height": 0.34
+          },
+          "colors": [
+            {
+              "color": "#D38BE81A",
+              "position": 0
+            },
+            {
+              "color": "#D38BE800",
+              "position": 0.18
+            }
+          ],
+          "center": {
+            "x": 0.82,
+            "y": 0.14
+          }
+        }
+      ],
+      "layout": "none",
+      "children": [
+        {
+          "type": "frame",
+          "id": "zVOsy",
+          "x": 72,
+          "y": 64,
+          "name": "Glass Header",
+          "width": 936,
+          "height": 116,
+          "fill": "#FFFFFFCC",
+          "cornerRadius": 58,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FFFFFFE6"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#5D7BA229",
+            "offset": {
+              "x": 0,
+              "y": 24
+            },
+            "blur": 70
+          },
+          "padding": [
+            18,
+            26
+          ],
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "frame",
+              "id": "pcPMF",
+              "name": "UVic MSA Logo Lockup",
+              "width": 390,
+              "height": 78,
+              "fill": "#FFFFFF00",
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "dByuT",
+                  "name": "Actual UVic MSA Logo Tile",
+                  "width": 76,
+                  "height": 76,
+                  "fill": "#F8F5EF",
+                  "cornerRadius": 38,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF"
+                  },
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 32,
+                      "id": "T8xMmf",
+                      "name": "UVic MSA Logo Flattened",
+                      "fill": {
+                        "type": "image",
+                        "enabled": true,
+                        "url": "public/uvic-msa-logo-ivory.png",
+                        "mode": "fit"
+                      },
+                      "width": 64,
+                      "height": 64
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "G7vmR",
+                  "name": "Logo Type",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 3,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "sB7c0",
+                      "fill": "$uvic-deep",
+                      "content": "UVIC MSA",
+                      "fontFamily": "$font-display",
+                      "fontSize": 30,
+                      "fontWeight": "700"
+                    },
+                    {
+                      "type": "text",
+                      "id": "OZgwO",
+                      "fill": "#35425699",
+                      "content": "Muslim Students' Association",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 15,
+                      "fontWeight": "500",
+                      "letterSpacing": 1.8
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "id": "TjgEg",
+              "name": "Handle",
+              "fill": "$uvic-forest",
+              "content": "@uvicmsa",
+              "fontFamily": "$font-sans",
+              "fontSize": 24,
+              "fontWeight": "600"
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "bqDoI",
+          "x": 72,
+          "y": 228,
+          "name": "Main Announcement Panel",
+          "width": 936,
+          "height": 608,
+          "fill": {
+            "type": "gradient",
+            "gradientType": "linear",
+            "enabled": true,
+            "rotation": 135,
+            "size": {
+              "height": 1
+            },
+            "colors": [
+              {
+                "color": "#1F2B3DF7",
+                "position": 0
+              },
+              {
+                "color": "#6E8FB6E8",
+                "position": 0.52
+              },
+              {
+                "color": "#D38BE866",
+                "position": 1
+              }
+            ]
+          },
+          "cornerRadius": 42,
+          "stroke": {
+            "thickness": 1,
+            "fill": "#FFFFFF4D"
+          },
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#5D7BA23D",
+            "offset": {
+              "x": 0,
+              "y": 28
+            },
+            "blur": 90
+          },
+          "layout": "vertical",
+          "gap": 30,
+          "padding": [
+            54,
+            56
+          ],
+          "children": [
+            {
+              "type": "frame",
+              "id": "Y9Iy2S",
+              "layoutPosition": "absolute",
+              "x": 650,
+              "y": 236,
+              "name": "Bracelet Bead Motif",
+              "opacity": 0.18,
+              "width": 280,
+              "height": 220,
+              "fill": "#FFFFFF00",
+              "layout": "none",
+              "children": [
+                {
+                  "type": "ellipse",
+                  "id": "k88I3",
+                  "x": 230,
+                  "y": 84,
+                  "fill": "#F8F5EF",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "D11Zi",
+                  "x": 219.30463773346128,
+                  "y": 113.50409425999395,
+                  "fill": "#B7C8EA",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "Xqg5U",
+                  "x": 189.3368986007432,
+                  "y": 137.16454080782603,
+                  "fill": "#D7E6F2",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "ZVwmy",
+                  "x": 146.03226086728196,
+                  "y": 150.295098028364,
+                  "fill": "#D38BE8",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "lF6K3",
+                  "x": 97.96773913271805,
+                  "y": 150.295098028364,
+                  "fill": "#F8F5EF",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "oHYHI",
+                  "x": 54.66310139925679,
+                  "y": 137.16454080782603,
+                  "fill": "#B7C8EA",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "cOzFc",
+                  "x": 24.69536226653875,
+                  "y": 113.50409425999396,
+                  "fill": "#D7E6F2",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "zW34i",
+                  "x": 14,
+                  "y": 84.00000000000001,
+                  "fill": "#D38BE8",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "pmWC5",
+                  "x": 24.695362266538737,
+                  "y": 54.49590574000605,
+                  "fill": "#F8F5EF",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "MfOew",
+                  "x": 54.66310139925676,
+                  "y": 30.83545919217398,
+                  "fill": "#B7C8EA",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "u0BJtG",
+                  "x": 97.96773913271802,
+                  "y": 17.70490197163599,
+                  "fill": "#D7E6F2",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "wwkZz",
+                  "x": 146.03226086728185,
+                  "y": 17.704901971635977,
+                  "fill": "#D38BE8",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "rtbWX",
+                  "x": 189.3368986007432,
+                  "y": 30.835459192173964,
+                  "fill": "#F8F5EF",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "uwxg5",
+                  "x": 219.30463773346128,
+                  "y": 54.495905740006094,
+                  "fill": "#B7C8EA",
+                  "width": 30,
+                  "height": 30,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF80"
+                  }
+                },
+                {
+                  "type": "ellipse",
+                  "id": "z6Eu3J",
+                  "x": 62,
+                  "y": 24,
+                  "innerRadius": 0.78,
+                  "fill": "#FFFFFF00",
+                  "width": 150,
+                  "height": 118,
+                  "stroke": {
+                    "thickness": 3,
+                    "fill": "#F8F5EF66"
+                  }
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "BaRxf",
+              "name": "Hero Top Row",
+              "width": "fill_container",
+              "fill": "#FFFFFF00",
+              "justifyContent": "space_between",
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Z6WPC",
+                  "name": "Post Type Badge",
+                  "fill": "#FFFFFF1F",
+                  "cornerRadius": 999,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF2E"
+                  },
+                  "padding": [
+                    12,
+                    20
+                  ],
+                  "justifyContent": "center",
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "wIIaf",
+                      "fill": "#F8F5EFD9",
+                      "content": "SISTERS NIGHT",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 18,
+                      "fontWeight": "700",
+                      "letterSpacing": 3.8
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "nKj7I",
+                  "fill": "#F8F5EFB8",
+                  "content": "MONDAY · JUNE 29",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 18,
+                  "fontWeight": "600",
+                  "letterSpacing": 3.2
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "DbHlZ",
+              "name": "Headline Block",
+              "width": "fill_container",
+              "fill": "#FFFFFF00",
+              "layout": "vertical",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "b0oXJv",
+                  "name": "Editable Headline",
+                  "fill": "$uvic-ivory",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Bracelet Making Night",
+                  "lineHeight": 0.92,
+                  "fontFamily": "$font-display",
+                  "fontSize": 88,
+                  "fontWeight": "700"
+                },
+                {
+                  "type": "text",
+                  "id": "icNxu",
+                  "name": "Editable Supporting Copy",
+                  "fill": "#F8F5EFDD",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "A relaxed evening for sisters to make bracelets, unwind, and spend time together.",
+                  "lineHeight": 1.25,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 29,
+                  "fontWeight": "normal"
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "Vfq9E",
+              "name": "Hero Detail Cards",
+              "width": "fill_container",
+              "fill": "#FFFFFF00",
+              "gap": 18,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "Pz1Yz",
+                  "name": "Time Card",
+                  "width": "fill_container",
+                  "height": 158,
+                  "fill": "#FFFFFF17",
+                  "cornerRadius": 28,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF24"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "rDvcu",
+                      "fill": "#FFFFFF00",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "FX8hj",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "clock-3",
+                          "iconFontFamily": "lucide",
+                          "fill": "$uvic-gold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "q4lhu",
+                          "fill": "#F8F5EFA6",
+                          "content": "TIME",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "letterSpacing": 2.8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "R2OPKc",
+                      "fill": "$uvic-ivory",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "6 PM",
+                      "lineHeight": 1.03,
+                      "fontFamily": "$font-display",
+                      "fontSize": 31,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "i9NVuK",
+                  "name": "Location Card",
+                  "width": "fill_container",
+                  "height": 158,
+                  "fill": "#FFFFFF17",
+                  "cornerRadius": 28,
+                  "stroke": {
+                    "thickness": 1,
+                    "fill": "#FFFFFF24"
+                  },
+                  "layout": "vertical",
+                  "gap": 16,
+                  "padding": 24,
+                  "children": [
+                    {
+                      "type": "frame",
+                      "id": "L6VWU",
+                      "fill": "#FFFFFF00",
+                      "gap": 12,
+                      "alignItems": "center",
+                      "children": [
+                        {
+                          "type": "icon_font",
+                          "id": "PnX6U",
+                          "width": 28,
+                          "height": 28,
+                          "iconFontName": "map-pin",
+                          "iconFontFamily": "lucide",
+                          "fill": "$uvic-gold"
+                        },
+                        {
+                          "type": "text",
+                          "id": "UxJys",
+                          "fill": "#F8F5EFA6",
+                          "content": "LOCATION",
+                          "fontFamily": "$font-sans",
+                          "fontSize": 15,
+                          "fontWeight": "700",
+                          "letterSpacing": 2.8
+                        }
+                      ]
+                    },
+                    {
+                      "type": "text",
+                      "id": "j3ktB9",
+                      "fill": "$uvic-ivory",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "DTB A120",
+                      "lineHeight": 1.03,
+                      "fontFamily": "$font-display",
+                      "fontSize": 31,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "O1drFE",
+          "x": 72,
+          "y": 880,
+          "name": "Lower Content",
+          "width": 936,
+          "height": 328,
+          "fill": "#FFFFFF00",
+          "gap": 22,
+          "children": [
+            {
+              "type": "frame",
+              "id": "tzApW",
+              "name": "Editable Info Card",
+              "width": "fill_container",
+              "height": "fill_container",
+              "fill": "#FFFFFFC9",
+              "cornerRadius": 34,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FFFFFFE6"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#5D7BA21F",
+                "offset": {
+                  "x": 0,
+                  "y": 18
+                },
+                "blur": 48
+              },
+              "layout": "vertical",
+              "gap": 18,
+              "padding": 30,
+              "children": [
+                {
+                  "type": "text",
+                  "id": "G8PGK7",
+                  "fill": "#35425680",
+                  "content": "WHAT TO EXPECT",
+                  "fontFamily": "$font-sans",
+                  "fontSize": 16,
+                  "fontWeight": "700",
+                  "letterSpacing": 3.4
+                },
+                {
+                  "type": "text",
+                  "id": "BjKLK",
+                  "name": "Editable Body",
+                  "fill": "$uvic-body",
+                  "textGrowth": "fixed-width",
+                  "width": "fill_container",
+                  "content": "Come make bracelets, meet sisters on campus, and enjoy a calm creative night with the UVic MSA community.",
+                  "lineHeight": 1.28,
+                  "fontFamily": "$font-sans",
+                  "fontSize": 28,
+                  "fontWeight": "500"
+                },
+                {
+                  "type": "frame",
+                  "id": "oiM1G",
+                  "name": "CTA Pill",
+                  "fill": "$uvic-deep",
+                  "cornerRadius": 999,
+                  "gap": 12,
+                  "padding": [
+                    15,
+                    22
+                  ],
+                  "alignItems": "center",
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "KuV9O",
+                      "fill": "$uvic-ivory",
+                      "content": "Bring a friend",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 20,
+                      "fontWeight": "600"
+                    },
+                    {
+                      "type": "icon_font",
+                      "id": "j2cN1",
+                      "width": 22,
+                      "height": 22,
+                      "iconFontName": "arrow-up-right",
+                      "iconFontFamily": "lucide",
+                      "fill": "$uvic-ivory"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "frame",
+              "id": "vsgbD",
+              "name": "Quick Details",
+              "width": 318,
+              "height": "fill_container",
+              "fill": "#D7E6F2D9",
+              "cornerRadius": 34,
+              "stroke": {
+                "thickness": 1,
+                "fill": "#FFFFFFCC"
+              },
+              "effect": {
+                "type": "shadow",
+                "shadowType": "outer",
+                "color": "#5D7BA21A",
+                "offset": {
+                  "x": 0,
+                  "y": 18
+                },
+                "blur": 48
+              },
+              "layout": "vertical",
+              "gap": 16,
+              "padding": 26,
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "YfmOX",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "pgcxy",
+                      "fill": "#35425680",
+                      "content": "DATE",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 2.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "egIo5",
+                      "fill": "$uvic-deep",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "June 29",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-display",
+                      "fontSize": 25,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "uVXcX",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "Ik4Ie",
+                      "fill": "#35425680",
+                      "content": "TIME",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 2.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "M4z7Q",
+                      "fill": "$uvic-deep",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "6 PM",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-display",
+                      "fontSize": 25,
+                      "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "frame",
+                  "id": "xpZ0P",
+                  "width": "fill_container",
+                  "fill": "#FFFFFF00",
+                  "layout": "vertical",
+                  "gap": 7,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "rBnuJ",
+                      "fill": "#35425680",
+                      "content": "ROOM",
+                      "fontFamily": "$font-sans",
+                      "fontSize": 14,
+                      "fontWeight": "700",
+                      "letterSpacing": 2.8
+                    },
+                    {
+                      "type": "text",
+                      "id": "MmMxh",
+                      "fill": "$uvic-deep",
+                      "textGrowth": "fixed-width",
+                      "width": "fill_container",
+                      "content": "DTB A120",
+                      "lineHeight": 1.05,
+                      "fontFamily": "$font-display",
+                      "fontSize": 25,
+                      "fontWeight": "700"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "frame",
+          "id": "z87AG",
+          "x": 72,
+          "y": 1244,
+          "name": "Footer Strip",
+          "width": 936,
+          "height": 54,
+          "fill": "#FFFFFF00",
+          "justifyContent": "space_between",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "text",
+              "id": "JrjrN",
+              "fill": "#354256B8",
+              "content": "Sisters bracelet making night",
+              "fontFamily": "$font-sans",
+              "fontSize": 20,
+              "fontWeight": "500"
+            },
+            {
+              "type": "text",
+              "id": "R2oiqU",
+              "fill": "$uvic-deep",
+              "content": "@uvicmsa",
+              "fontFamily": "$font-sans",
+              "fontSize": 20,
+              "fontWeight": "700"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variables": {
+    "font-display": {
+      "type": "string",
+      "value": "Atkinson Hyperlegible"
+    },
+    "font-sans": {
+      "type": "string",
+      "value": "Inter"
+    },
+    "uvic-body": {
+      "type": "color",
+      "value": "#354256"
+    },
+    "uvic-deep": {
+      "type": "color",
+      "value": "#1F2B3D"
+    },
+    "uvic-forest": {
+      "type": "color",
+      "value": "#6E8FB6"
+    },
+    "uvic-gold": {
+      "type": "color",
+      "value": "#B7C8EA"
+    },
+    "uvic-ivory": {
+      "type": "color",
+      "value": "#F8F5EF"
+    },
+    "uvic-lavender": {
+      "type": "color",
+      "value": "#D38BE8"
+    },
+    "uvic-sage": {
+      "type": "color",
+      "value": "#D7E6F2"
+    },
+    "uvic-sand": {
+      "type": "color",
+      "value": "#EEF3F8"
+    },
+    "uvic-white-glass": {
+      "type": "color",
+      "value": "#FFFFFFB8"
+    }
+  }
+}
