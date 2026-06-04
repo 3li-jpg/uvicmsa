@@ -1,15 +1,29 @@
 import type { Metadata } from 'next'
 import { ArrowLeft, ArrowUpRight, CheckCircle2, HeartHandshake, ShieldCheck, Sparkles } from 'lucide-react'
-import { Footer } from '@/src/components/layout/Footer'
-import { Navbar } from '@/src/components/layout/Navbar'
+import { SiteShell } from '@/src/components/layout/SiteShell'
 import { Button } from '@/src/components/ui/Button'
 import { Card } from '@/src/components/ui/Card'
 import { Container } from '@/src/components/ui/Container'
 import { ruhContent } from '@/src/content/ruh'
 
+const title = 'Ruh Mental Health Support'
+const description = 'Learn about UVic MSA’s partnership with Ruh for Muslim mental health support for students at the University of Victoria.'
+
 export const metadata: Metadata = {
-  title: 'Ruh Mental Health Support | UVic MSA',
-  description: 'Learn about UVic MSA’s partnership with Ruh for Muslim mental health support.',
+  title,
+  description,
+  alternates: {
+    canonical: '/counselling',
+  },
+  openGraph: {
+    title,
+    description,
+    url: '/counselling',
+  },
+  twitter: {
+    title,
+    description,
+  },
 }
 
 const highlights = [
@@ -38,21 +52,8 @@ const steps = [
 
 export default function CounsellingPage() {
   return (
-    <div className="relative overflow-x-clip bg-ivory text-body dark:bg-[#101a2a] dark:text-ivory/95">
-      <a className="skip-link" href="#main-content">
-        Skip to content
-      </a>
-
-      <div aria-hidden className="pointer-events-none fixed inset-0 overflow-hidden">
-        <div className="ambient-orb left-[-8rem] top-[-5rem] h-[20rem] w-[20rem] bg-sage/60" />
-        <div className="ambient-orb right-[-6rem] top-[12rem] h-[26rem] w-[26rem] bg-gold/35" />
-        <div className="ambient-orb bottom-[-8rem] left-[10%] h-[24rem] w-[24rem] bg-forest/25" />
-      </div>
-
-      <Navbar />
-
-      <main className="relative z-10" id="main-content">
-        <section className="pb-6 pt-32 sm:pb-8 sm:pt-40 lg:pb-10 lg:pt-44">
+    <SiteShell className="relative overflow-x-clip bg-ivory text-body dark:bg-[#101a2a] dark:text-ivory/95">
+      <section className="pb-6 pt-32 sm:pb-8 sm:pt-40 lg:pb-10 lg:pt-44">
           <Container>
             <Button className="mb-8" href="/#resources" variant="secondary">
               <ArrowLeft className="mr-2 h-4 w-4" />
@@ -129,10 +130,7 @@ export default function CounsellingPage() {
               </div>
             </Card>
           </Container>
-        </section>
-      </main>
-
-      <Footer />
-    </div>
+      </section>
+    </SiteShell>
   )
 }

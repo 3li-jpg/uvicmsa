@@ -26,5 +26,4 @@ export const heroContent: HeroContent = {
   description: 'Welcome to the official website of the Muslim Students’ Association at the University of Victoria.',
   primaryCta: 'Join the Community',
   secondaryCta: 'View Prayer Info',
-  highlights: ['Jummah every Friday', 'Prayer room on campus', 'Resources for students'],
 }

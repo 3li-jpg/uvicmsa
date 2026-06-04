@@ -6,7 +6,6 @@ export type SectionId =
   | 'food'
   | 'team'
   | 'resources'
-  | 'testimonials'
   | 'faq'
   | 'contact'
 
@@ -23,7 +22,6 @@ export type HeroContent = {
   description: string
   primaryCta: string
   secondaryCta: string
-  highlights: string[]
 }
 
 export type PrayerInfo = {
@@ -35,10 +33,6 @@ export type PrayerInfo = {
   accessNote: string
   weeklyNote: string
   prayerRoomTitle: string
-  sections: Array<{
-    title: string
-    description: string
-  }>
 }
 
 export type EventItem = {
@@ -58,12 +52,6 @@ export type TeamProfile = {
   name: string
   role: string
   bio?: string
-  initials: string
-}
-
-export type TestimonialItem = {
-  quote: string
-  attribution: string
 }
 
 export type FAQItem = {

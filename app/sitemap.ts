@@ -1,0 +1,21 @@
+import type { MetadataRoute } from 'next'
+import { absoluteUrl } from '@/src/lib/siteUrl'
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const lastModified = new Date()
+
+  return [
+    {
+      url: absoluteUrl('/'),
+      lastModified,
+      changeFrequency: 'weekly',
+      priority: 1,
+    },
+    {
+      url: absoluteUrl('/counselling'),
+      lastModified,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+  ]
+}

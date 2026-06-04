@@ -1,6 +1,6 @@
 'use client'
 
-import { memo, useEffect, useState } from 'react'
+import { memo } from 'react'
 import {
   motion,
   useReducedMotion,
@@ -37,8 +37,6 @@ const motionElements = {
   section: motion.section,
   span: motion.span,
 } as const
-
-const mobileAnimationQuery = '(max-width: 767px)'
 
 type MotionElementType = Extract<keyof DOMMotionComponents, keyof typeof motionElements>
 
@@ -195,21 +193,8 @@ function TextAnimateBase({
 }: TextAnimateProps) {
   const MotionComponent = motionElements[Component]
   const shouldReduceMotion = useReducedMotion()
-  const [isMobileViewport, setIsMobileViewport] = useState(() =>
-    typeof window === 'undefined' ? false : window.matchMedia(mobileAnimationQuery).matches,
-  )
 
-  useEffect(() => {
-    const mobileMedia = window.matchMedia(mobileAnimationQuery)
-    const updateMobileViewport = () => setIsMobileViewport(mobileMedia.matches)
-
-    updateMobileViewport()
-    mobileMedia.addEventListener('change', updateMobileViewport)
-
-    return () => mobileMedia.removeEventListener('change', updateMobileViewport)
-  }, [])
-
-  if (shouldReduceMotion || isMobileViewport) {
+  if (shouldReduceMotion) {
     return (
       <MotionComponent className={cn('whitespace-pre-wrap', className)} {...props}>
         {children}
