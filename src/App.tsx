@@ -16,10 +16,10 @@ function App() {
       <About />
       <PrayerSection />
       <EventsSection />
-      <FoodGuide />
       <TeamSection />
       <ResourcesSection />
       <InstagramSection />
+      <FoodGuide />
       <FAQ />
     </SiteShell>
   )

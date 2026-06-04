@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ArrowUpRight, Clock3, DoorOpen } from 'lucide-react'
 import { externalLinks, navItems } from '../../content/site'
+import { BlurFade } from '../ui/BlurFade'
 import { Container } from '../ui/Container'
 
 type SocialIconProps = {
@@ -65,72 +66,78 @@ export function Footer() {
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-white/12" />
       <Container>
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(220px,0.5fr)_minmax(260px,0.7fr)] lg:gap-16">
-          <div>
-            <p className="text-sm uppercase tracking-[0.24em] text-ivory/55">UVic MSA</p>
-            <h2 className="mt-5 max-w-2xl font-display text-4xl font-bold tracking-[-0.06em] text-ivory sm:text-5xl">
-              UVic Muslim Students’ Association
-            </h2>
-            <p className="mt-6 max-w-2xl text-base leading-8 text-ivory/80">
-              Prayer info, student resources, and ways to stay connected.
-            </p>
+          <BlurFade inView delay={0.04}>
+            <div>
+              <p className="text-sm uppercase tracking-[0.24em] text-ivory/55">UVic MSA</p>
+              <h2 className="mt-5 max-w-2xl font-display text-4xl font-bold tracking-[-0.06em] text-ivory sm:text-5xl">
+                UVic Muslim Students’ Association
+              </h2>
+              <p className="mt-6 max-w-2xl text-base leading-8 text-ivory/80">
+                Prayer info, student resources, and ways to stay connected.
+              </p>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              {socialLinks.map((link) => {
-                const Icon = link.icon
-                return (
-                  <a
-                    aria-label={link.label}
-                    className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/6 text-ivory/90 transition-colors duration-300 hover:bg-white/10 hover:text-ivory"
-                    href={link.href}
-                    key={link.label}
-                    rel="noreferrer"
-                    target="_blank"
-                    title={link.label}
-                  >
-                    <Icon className="h-5 w-5" />
-                  </a>
-                )
-              })}
+              <div className="mt-8 flex flex-wrap gap-3">
+                {socialLinks.map((link) => {
+                  const Icon = link.icon
+                  return (
+                    <a
+                      aria-label={link.label}
+                      className="inline-flex h-12 w-12 transform-gpu items-center justify-center rounded-full border border-white/10 bg-white/6 text-ivory/90 transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/10 hover:text-ivory active:scale-[0.96]"
+                      href={link.href}
+                      key={link.label}
+                      rel="noreferrer"
+                      target="_blank"
+                      title={link.label}
+                    >
+                      <Icon className="h-5 w-5" />
+                    </a>
+                  )
+                })}
+              </div>
             </div>
-          </div>
+          </BlurFade>
 
-          <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-ivory/50">Navigation</p>
-            <ul className="mt-5 space-y-3 text-sm text-ivory/80">
-              {navItems.map((item) => (
-                <li key={item.id}>
-                  <Link className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-ivory" href={item.href}>
-                    {item.label}
-                    <ArrowUpRight className="h-4 w-4" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <BlurFade inView delay={0.1}>
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-ivory/50">Navigation</p>
+              <ul className="mt-5 space-y-3 text-sm text-ivory/80">
+                {navItems.map((item) => (
+                  <li key={item.id}>
+                    <Link className="inline-flex items-center gap-2 transition-colors duration-300 hover:text-ivory" href={item.href}>
+                      {item.label}
+                      <ArrowUpRight className="h-4 w-4" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </BlurFade>
 
-          <div>
-            <p className="text-sm uppercase tracking-[0.2em] text-ivory/50">Key details</p>
-            <dl className="mt-5 space-y-6">
-              <div className="border-b border-white/10 pb-6">
-                <dt className="flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-ivory/55">
-                  <Clock3 className="h-4 w-4 text-gold" />
-                  Jummah
-                </dt>
-                <dd className="mt-3 font-display text-2xl font-bold tracking-[-0.05em] text-ivory">Every Friday · 1:30 PM</dd>
-                <dd className="mt-2 text-sm leading-7 text-ivory/80">UVic Multifaith Centre</dd>
-              </div>
-              <div>
-                <dt className="flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-ivory/55">
-                  <DoorOpen className="h-4 w-4 text-gold" />
-                  Prayer room
-                </dt>
-                <dd className="mt-3 font-display text-2xl font-bold tracking-[-0.05em] text-ivory">Sedgewick Room C125</dd>
-                <dd className="mt-2 text-sm leading-7 text-ivory/80">
-                  Contact the MSA through Discord or Instagram for the door code.
-                </dd>
-              </div>
-            </dl>
-          </div>
+          <BlurFade inView delay={0.16}>
+            <div>
+              <p className="text-sm uppercase tracking-[0.2em] text-ivory/50">Key details</p>
+              <dl className="mt-5 space-y-6">
+                <div className="border-b border-white/10 pb-6">
+                  <dt className="flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-ivory/55">
+                    <Clock3 className="h-4 w-4 text-gold" />
+                    Jummah
+                  </dt>
+                  <dd className="mt-3 font-display text-2xl font-bold tracking-[-0.05em] text-ivory">Every Friday · 1:30 PM</dd>
+                  <dd className="mt-2 text-sm leading-7 text-ivory/80">UVic Multifaith Centre</dd>
+                </div>
+                <div>
+                  <dt className="flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-ivory/55">
+                    <DoorOpen className="h-4 w-4 text-gold" />
+                    Prayer room
+                  </dt>
+                  <dd className="mt-3 font-display text-2xl font-bold tracking-[-0.05em] text-ivory">Sedgewick Room C125</dd>
+                  <dd className="mt-2 text-sm leading-7 text-ivory/80">
+                    Contact the MSA through Discord or Instagram for the door code.
+                  </dd>
+                </div>
+              </dl>
+            </div>
+          </BlurFade>
         </div>
       </Container>
     </footer>

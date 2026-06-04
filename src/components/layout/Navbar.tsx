@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import { motion } from 'motion/react'
 import { externalLinks, navItems } from '../../content/site'
 import { useActiveSection } from '../../hooks/useActiveSection'
 import { cn } from '../../lib/cn'
@@ -24,6 +25,7 @@ export function Navbar() {
     [],
   )
   const activeSection = useActiveSection(sectionIds, isHomePage)
+  const activeNavItemId = isHomePage ? navItems.find((item) => item.sectionId === activeSection)?.id : undefined
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 20)
@@ -124,17 +126,24 @@ export function Navbar() {
 
           <nav aria-label="Primary" className="hidden items-center gap-1 lg:flex">
             {navItems.map((item) => {
-              const isActive = isHomePage && item.sectionId !== undefined && activeSection === item.sectionId
+              const isActive = activeNavItemId === item.id
               return (
                 <Link
                   className={cn(
-                    'rounded-full px-4 py-2 text-sm text-deep/78 transition-all duration-300 hover:bg-white/82 hover:text-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest dark:text-ivory/90 dark:hover:bg-white/10 dark:hover:text-ivory',
-                    isActive && 'bg-white/88 text-deep shadow-[0_10px_24px_rgba(93,123,162,0.12)] dark:bg-white/12 dark:text-ivory dark:shadow-none',
+                    'relative rounded-full px-4 py-2 text-sm text-deep/78 transition-colors duration-300 hover:bg-white/82 hover:text-deep focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-forest dark:text-ivory/90 dark:hover:bg-white/10 dark:hover:text-ivory',
+                    isActive && 'text-deep dark:text-ivory',
                   )}
                   href={item.href}
                   key={item.id}
                 >
-                  {item.label}
+                  {isActive ? (
+                    <motion.span
+                      className="absolute inset-0 rounded-full bg-white/88 shadow-[0_10px_24px_rgba(93,123,162,0.12)] dark:bg-white/12 dark:shadow-none"
+                      layoutId="desktop-nav-active-indicator"
+                      transition={{ type: 'spring', stiffness: 420, damping: 34 }}
+                    />
+                  ) : null}
+                  <span className="relative z-10">{item.label}</span>
                 </Link>
               )
             })}

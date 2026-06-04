@@ -4,6 +4,7 @@ import { SiteShell } from '@/src/components/layout/SiteShell'
 import { Button } from '@/src/components/ui/Button'
 import { Card } from '@/src/components/ui/Card'
 import { Container } from '@/src/components/ui/Container'
+import { BlurFade } from '@/src/components/ui/BlurFade'
 import { ruhContent } from '@/src/content/ruh'
 
 const title = 'Ruh Mental Health Support'
@@ -54,13 +55,16 @@ export default function CounsellingPage() {
   return (
     <SiteShell className="relative overflow-x-clip bg-ivory text-body dark:bg-[#101a2a] dark:text-ivory/95">
       <section className="pb-6 pt-32 sm:pb-8 sm:pt-40 lg:pb-10 lg:pt-44">
-          <Container>
+        <Container>
+          <BlurFade inView delay={0.02}>
             <Button className="mb-8" href="/#resources" variant="secondary">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to resources
             </Button>
+          </BlurFade>
 
-            <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.48fr)] lg:items-stretch">
+          <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.48fr)] lg:items-stretch">
+            <BlurFade inView delay={0.06}>
               <Card className="overflow-hidden border-white/30 bg-[linear-gradient(145deg,rgba(31,43,61,0.96),rgba(110,143,182,0.78))] p-6 text-ivory shadow-[0_24px_80px_rgba(93,123,162,0.2)] sm:p-10 lg:p-12">
                 <p className="text-sm uppercase tracking-[0.24em] text-ivory/60">{ruhContent.eyebrow}</p>
                 <h1 className="mt-5 max-w-4xl font-display text-4xl font-bold tracking-[-0.06em] text-ivory sm:text-6xl lg:text-7xl">
@@ -77,9 +81,11 @@ export default function CounsellingPage() {
                   </Button>
                 </div>
               </Card>
+            </BlurFade>
 
+            <BlurFade inView delay={0.12}>
               <Card className="p-6 dark:border-white/10 dark:bg-white/[0.06] sm:p-8">
-                <p className="text-sm uppercase tracking-[0.2em] text-body/55 dark:text-ivory/70">How it works</p>
+                <p className="text-sm uppercase tracking-[0.2em] text-body/70 dark:text-ivory/70">How it works</p>
                 <ol className="mt-6 space-y-5">
                   {steps.map((step, index) => (
                     <li className="flex gap-4" key={step}>
@@ -91,27 +97,31 @@ export default function CounsellingPage() {
                   ))}
                 </ol>
               </Card>
-            </div>
-          </Container>
-        </section>
+            </BlurFade>
+          </div>
+        </Container>
+      </section>
 
-        <section className="pb-16 sm:pb-24">
-          <Container>
-            <div className="grid gap-5 md:grid-cols-3">
-              {highlights.map((item) => {
-                const Icon = item.icon
-                return (
-                  <Card className="p-6 dark:border-white/10 dark:bg-white/[0.06] sm:p-7" key={item.title}>
+      <section className="pb-16 sm:pb-24">
+        <Container>
+          <div className="grid gap-5 md:grid-cols-3">
+            {highlights.map((item, index) => {
+              const Icon = item.icon
+              return (
+                <BlurFade inView delay={0.08 + index * 0.05} key={item.title}>
+                  <Card className="p-6 dark:border-white/10 dark:bg-white/[0.06] sm:p-7">
                     <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-sage text-deep shadow-soft dark:bg-white/[0.12] dark:text-ivory">
                       <Icon className="h-5 w-5" />
                     </div>
                     <h2 className="mt-5 font-display text-2xl font-bold tracking-[-0.05em] text-deep dark:text-ivory">{item.title}</h2>
                     <p className="mt-4 text-sm leading-7 text-body/80 dark:text-ivory/90">{item.description}</p>
                   </Card>
-                )
-              })}
-            </div>
+                </BlurFade>
+              )
+            })}
+          </div>
 
+          <BlurFade inView delay={0.18}>
             <Card className="mt-6 p-6 dark:border-white/10 dark:bg-white/[0.06] sm:p-8">
               <div className="grid gap-6 lg:grid-cols-[auto_minmax(0,1fr)_auto] lg:items-center">
                 <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sage text-deep shadow-soft dark:bg-white/[0.12] dark:text-ivory">
@@ -129,7 +139,8 @@ export default function CounsellingPage() {
                 </Button>
               </div>
             </Card>
-          </Container>
+          </BlurFade>
+        </Container>
       </section>
     </SiteShell>
   )
