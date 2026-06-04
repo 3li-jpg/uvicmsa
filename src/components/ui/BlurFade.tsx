@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, type ReactNode } from 'react'
+import { useEffect, useRef, useState, type ReactNode } from 'react'
 import {
   motion,
   useInView,
@@ -33,6 +33,26 @@ const getFilter = (v: Variants[string]) =>
 
 const normalizeSeconds = (value: number) => (value > 10 ? value / 1000 : value)
 
+const mobileMotionQuery = '(max-width: 767px)'
+
+function useMobileMotionPreference() {
+  const [shouldUseMobileMotion, setShouldUseMobileMotion] = useState(() =>
+    typeof window === 'undefined' ? false : window.matchMedia(mobileMotionQuery).matches
+  )
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(mobileMotionQuery)
+    const updatePreference = () => setShouldUseMobileMotion(mediaQuery.matches)
+
+    updatePreference()
+    mediaQuery.addEventListener('change', updatePreference)
+
+    return () => mediaQuery.removeEventListener('change', updatePreference)
+  }, [])
+
+  return shouldUseMobileMotion
+}
+
 export function BlurFade({
   children,
   className,
@@ -48,6 +68,7 @@ export function BlurFade({
 }: BlurFadeProps) {
   const ref = useRef(null)
   const shouldReduceMotion = useReducedMotion()
+  const shouldUseMobileMotion = useMobileMotionPreference()
   const inViewResult = useInView(ref, { once: true, margin: inViewMargin })
   const isInView = !inView || inViewResult
 
@@ -56,12 +77,12 @@ export function BlurFade({
       [direction === 'left' || direction === 'right' ? 'x' : 'y']:
         direction === 'right' || direction === 'down' ? -offset : offset,
       opacity: 0,
-      filter: `blur(${blur})`,
+      ...(shouldUseMobileMotion ? {} : { filter: `blur(${blur})` }),
     },
     visible: {
       [direction === 'left' || direction === 'right' ? 'x' : 'y']: 0,
       opacity: 1,
-      filter: 'blur(0px)',
+      ...(shouldUseMobileMotion ? {} : { filter: 'blur(0px)' }),
     },
   }
   const combinedVariants = variant ?? defaultVariants
@@ -70,6 +91,7 @@ export function BlurFade({
   const visibleFilter = getFilter(combinedVariants.visible)
 
   const shouldTransitionFilter =
+    !shouldUseMobileMotion &&
     hiddenFilter != null &&
     visibleFilter != null &&
     hiddenFilter !== visibleFilter

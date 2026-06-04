@@ -1,6 +1,6 @@
 'use client'
 
-import { memo } from 'react'
+import { memo, useEffect, useState } from 'react'
 import {
   motion,
   useReducedMotion,
@@ -69,6 +69,26 @@ const defaultContainerVariants: Variants = {
 const defaultItemVariants: Variants = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
+}
+
+const mobileMotionQuery = '(max-width: 767px)'
+
+function useMobileMotionPreference() {
+  const [shouldUseMobileMotion, setShouldUseMobileMotion] = useState(() =>
+    typeof window === 'undefined' ? false : window.matchMedia(mobileMotionQuery).matches
+  )
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(mobileMotionQuery)
+    const updatePreference = () => setShouldUseMobileMotion(mediaQuery.matches)
+
+    updatePreference()
+    mediaQuery.addEventListener('change', updatePreference)
+
+    return () => mediaQuery.removeEventListener('change', updatePreference)
+  }, [])
+
+  return shouldUseMobileMotion
 }
 
 const defaultItemAnimationVariants: Record<AnimationVariant, { container: Variants; item: Variants }> = {
@@ -176,6 +196,45 @@ const defaultItemAnimationVariants: Record<AnimationVariant, { container: Varian
   },
 }
 
+const mobileItemAnimationVariants: Record<AnimationVariant, { container: Variants; item: Variants }> = {
+  ...defaultItemAnimationVariants,
+  blurIn: {
+    container: defaultContainerVariants,
+    item: {
+      hidden: { opacity: 0, y: 12 },
+      show: { opacity: 1, y: 0, transition: { duration: 0.25 } },
+    },
+  },
+  blurInUp: {
+    container: defaultContainerVariants,
+    item: {
+      hidden: { opacity: 0, y: 16 },
+      show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          y: { duration: 0.25 },
+          opacity: { duration: 0.3 },
+        },
+      },
+    },
+  },
+  blurInDown: {
+    container: defaultContainerVariants,
+    item: {
+      hidden: { opacity: 0, y: -16 },
+      show: {
+        opacity: 1,
+        y: 0,
+        transition: {
+          y: { duration: 0.25 },
+          opacity: { duration: 0.3 },
+        },
+      },
+    },
+  },
+}
+
 function TextAnimateBase({
   children,
   delay = 0,
@@ -193,6 +252,7 @@ function TextAnimateBase({
 }: TextAnimateProps) {
   const MotionComponent = motionElements[Component]
   const shouldReduceMotion = useReducedMotion()
+  const shouldUseMobileMotion = useMobileMotionPreference()
 
   if (shouldReduceMotion) {
     return (
@@ -236,16 +296,16 @@ function TextAnimateBase({
       }
     : {
         container: {
-          ...defaultItemAnimationVariants[animation].container,
+          ...(shouldUseMobileMotion ? mobileItemAnimationVariants : defaultItemAnimationVariants)[animation].container,
           show: {
-            ...defaultItemAnimationVariants[animation].container.show,
+            ...(shouldUseMobileMotion ? mobileItemAnimationVariants : defaultItemAnimationVariants)[animation].container.show,
             transition: {
               delayChildren: delay,
               staggerChildren: duration / Math.max(segments.length, 1),
             },
           },
         },
-        item: defaultItemAnimationVariants[animation].item,
+        item: (shouldUseMobileMotion ? mobileItemAnimationVariants : defaultItemAnimationVariants)[animation].item,
       }
 
   return (
