@@ -201,16 +201,17 @@ const mobileItemAnimationVariants: Record<AnimationVariant, { container: Variant
   blurIn: {
     container: defaultContainerVariants,
     item: {
-      hidden: { opacity: 0, y: 12 },
-      show: { opacity: 1, y: 0, transition: { duration: 0.25 } },
+      hidden: { opacity: 0, filter: 'blur(0px)', y: 12 },
+      show: { opacity: 1, filter: 'blur(0px)', y: 0, transition: { duration: 0.25 } },
     },
   },
   blurInUp: {
     container: defaultContainerVariants,
     item: {
-      hidden: { opacity: 0, y: 16 },
+      hidden: { opacity: 0, filter: 'blur(0px)', y: 16 },
       show: {
         opacity: 1,
+        filter: 'blur(0px)',
         y: 0,
         transition: {
           y: { duration: 0.25 },
@@ -222,9 +223,10 @@ const mobileItemAnimationVariants: Record<AnimationVariant, { container: Variant
   blurInDown: {
     container: defaultContainerVariants,
     item: {
-      hidden: { opacity: 0, y: -16 },
+      hidden: { opacity: 0, filter: 'blur(0px)', y: -16 },
       show: {
         opacity: 1,
+        filter: 'blur(0px)',
         y: 0,
         transition: {
           y: { duration: 0.25 },
