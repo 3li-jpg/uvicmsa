@@ -326,7 +326,7 @@ function TextAnimateBase({
         <motion.span
           key={`${by}-${segment}-${index}`}
           variants={finalVariants.item}
-          className={cn(by === 'line' ? 'block' : 'inline-block whitespace-pre', segmentClassName)}
+          className={cn('mobile-filter-reset', by === 'line' ? 'block' : 'inline-block whitespace-pre', segmentClassName)}
           aria-hidden={accessible ? true : undefined}
         >
           {segment}

@@ -118,7 +118,7 @@ export function BlurFade({
           ? { filter: { duration: normalizeSeconds(duration) } }
           : {}),
       }}
-      className={className}
+      className={['mobile-filter-reset', className].filter(Boolean).join(' ')}
       {...props}
     >
       {children}
