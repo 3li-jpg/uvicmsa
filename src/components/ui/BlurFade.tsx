@@ -36,9 +36,7 @@ const normalizeSeconds = (value: number) => (value > 10 ? value / 1000 : value)
 const mobileMotionQuery = '(max-width: 767px)'
 
 function useMobileMotionPreference() {
-  const [shouldUseMobileMotion, setShouldUseMobileMotion] = useState(() =>
-    typeof window === 'undefined' ? false : window.matchMedia(mobileMotionQuery).matches
-  )
+  const [shouldUseMobileMotion, setShouldUseMobileMotion] = useState(false)
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(mobileMotionQuery)

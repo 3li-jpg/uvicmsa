@@ -74,9 +74,7 @@ const defaultItemVariants: Variants = {
 const mobileMotionQuery = '(max-width: 767px)'
 
 function useMobileMotionPreference() {
-  const [shouldUseMobileMotion, setShouldUseMobileMotion] = useState(() =>
-    typeof window === 'undefined' ? false : window.matchMedia(mobileMotionQuery).matches
-  )
+  const [shouldUseMobileMotion, setShouldUseMobileMotion] = useState(false)
 
   useEffect(() => {
     const mediaQuery = window.matchMedia(mobileMotionQuery)
@@ -255,6 +253,7 @@ function TextAnimateBase({
   const MotionComponent = motionElements[Component]
   const shouldReduceMotion = useReducedMotion()
   const shouldUseMobileMotion = useMobileMotionPreference()
+  const effectiveBy = shouldUseMobileMotion && by === 'word' ? 'text' : by
 
   if (shouldReduceMotion) {
     return (
@@ -265,7 +264,7 @@ function TextAnimateBase({
   }
 
   let segments: string[] = []
-  switch (by) {
+  switch (effectiveBy) {
     case 'word':
       segments = children.split(/(\s+)/)
       break
@@ -324,9 +323,9 @@ function TextAnimateBase({
       {accessible && <span className="sr-only">{children}</span>}
       {segments.map((segment, index) => (
         <motion.span
-          key={`${by}-${segment}-${index}`}
+          key={`${effectiveBy}-${segment}-${index}`}
           variants={finalVariants.item}
-          className={cn('mobile-filter-reset', by === 'line' ? 'block' : 'inline-block whitespace-pre', segmentClassName)}
+          className={cn('mobile-filter-reset', effectiveBy === 'line' ? 'block' : 'inline-block whitespace-pre', segmentClassName)}
           aria-hidden={accessible ? true : undefined}
         >
           {segment}
