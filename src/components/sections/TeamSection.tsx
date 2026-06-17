@@ -21,7 +21,6 @@ export function TeamSection() {
                   <h3 className="font-display text-2xl font-bold tracking-[-0.05em] text-deep dark:text-ivory">{member.name}</h3>
                   <p className="text-sm font-medium text-body/70 dark:text-ivory/80 sm:text-right">{member.role}</p>
                 </div>
-                {member.bio ? <p className="mt-3 max-w-3xl text-sm leading-7 text-body/80 dark:text-ivory/90">{member.bio}</p> : null}
               </li>
             ))}
           </ul>

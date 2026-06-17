@@ -1,6 +1,4 @@
-import type { FAQItem } from '../data/types'
-
-export const faqItems: FAQItem[] = [
+export const faqItems = [
   {
     question: 'Where is Jummah held?',
     answer: 'Every Friday at 1:30 PM at the UVic Multifaith Centre.',

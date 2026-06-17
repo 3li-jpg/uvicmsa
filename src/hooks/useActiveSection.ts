@@ -1,8 +1,7 @@
 import { useEffect, useState } from 'react'
-import type { SectionId } from '../data/types'
 
-export function useActiveSection(sectionIds: SectionId[], enabled = true) {
-  const [activeSection, setActiveSection] = useState<SectionId | undefined>(sectionIds[0])
+export function useActiveSection(sectionIds: string[], enabled = true) {
+  const [activeSection, setActiveSection] = useState<string | undefined>(sectionIds[0])
 
   useEffect(() => {
     if (!enabled) {
@@ -24,7 +23,7 @@ export function useActiveSection(sectionIds: SectionId[], enabled = true) {
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
 
         if (visibleEntries[0]) {
-          setActiveSection(visibleEntries[0].target.id as SectionId)
+          setActiveSection(visibleEntries[0].target.id)
         }
       },
       {

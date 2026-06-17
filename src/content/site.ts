@@ -1,6 +1,4 @@
-import type { HeroContent, NavItem } from '../data/types'
-
-export const navItems: NavItem[] = [
+export const navItems = [
   { id: 'home', label: 'Home', href: '/#home', sectionId: 'home' },
   { id: 'about', label: 'About', href: '/#about', sectionId: 'about' },
   { id: 'prayer', label: 'Prayer', href: '/#prayer', sectionId: 'prayer' },
@@ -20,7 +18,7 @@ export const externalLinks = {
   ruh: 'https://www.ruhcare.com/msa/victoria',
 } as const
 
-export const heroContent: HeroContent = {
+export const heroContent = {
   eyebrow: 'UVic Muslim Students’ Association',
   title: 'Faith, community, and student life at UVic.',
   description: 'Welcome to the official website of the Muslim Students’ Association at the University of Victoria.',

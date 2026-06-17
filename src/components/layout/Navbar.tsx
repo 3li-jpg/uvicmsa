@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import { motion } from 'motion/react'
 import { externalLinks, navItems } from '../../content/site'
 import { useActiveSection } from '../../hooks/useActiveSection'
 import { cn } from '../../lib/cn'
@@ -137,11 +136,7 @@ export function Navbar() {
                   key={item.id}
                 >
                   {isActive ? (
-                    <motion.span
-                      className="absolute inset-0 rounded-full bg-white/88 shadow-[0_10px_24px_rgba(93,123,162,0.12)] dark:bg-white/12 dark:shadow-none"
-                      layoutId="desktop-nav-active-indicator"
-                      transition={{ type: 'spring', stiffness: 420, damping: 34 }}
-                    />
+                    <span className="absolute inset-0 rounded-full bg-white/88 shadow-[0_10px_24px_rgba(93,123,162,0.12)] dark:bg-white/12 dark:shadow-none" />
                   ) : null}
                   <span className="relative z-10">{item.label}</span>
                 </Link>
@@ -150,14 +145,14 @@ export function Navbar() {
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
-            <AnimatedThemeToggler variant="circle" />
+            <AnimatedThemeToggler />
             <Button href={externalLinks.discord} rel="noreferrer" target="_blank">
               Join MSA
             </Button>
           </div>
 
           <div className="flex items-center gap-2 lg:hidden">
-            <AnimatedThemeToggler className="h-11 w-11 rounded-[1.35rem] sm:h-12 sm:w-12 sm:rounded-full" variant="circle" />
+            <AnimatedThemeToggler className="h-11 w-11 rounded-[1.35rem] sm:h-12 sm:w-12 sm:rounded-full" />
             <button
               aria-controls="mobile-menu"
               aria-expanded={isOpen}

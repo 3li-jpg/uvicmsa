@@ -1,6 +1,4 @@
-import type { EventItem } from '../data/types'
-
-export const events: EventItem[] = [
+export const events = [
   {
     title: 'Jummah',
     schedule: 'Fridays · 1:30 PM',

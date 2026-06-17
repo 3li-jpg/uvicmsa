@@ -1,6 +1,4 @@
-import type { FoodPlace } from '../data/types'
-
-export const foodGuide: FoodPlace[] = [
+export const foodGuide = [
   { name: 'Fig Deli Restaurant', category: 'Restaurant', mapUrl: 'https://www.google.com/maps/search/?api=1&query=Fig%20Deli%20Restaurant%20Victoria%20BC' },
   { name: 'Bold Shawarma', category: 'Restaurant', mapUrl: 'https://www.google.com/maps/search/?api=1&query=Bold%20Shawarma%20Victoria%20BC' },
   { name: 'Caravana Cafe', category: 'Restaurant', mapUrl: 'https://www.google.com/maps/search/?api=1&query=Caravana%20Cafe%20Victoria%20BC' },

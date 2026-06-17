@@ -1,6 +1,4 @@
-import type { TeamProfile } from '../data/types'
-
-export const team: TeamProfile[] = [
+export const team = [
   {
     name: 'Hasan Sheikh',
     role: 'President',

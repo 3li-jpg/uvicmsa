@@ -132,6 +132,25 @@ html.dark ::selection {
   opacity: 0.72;
 }
 
+.reveal {
+  animation: reveal var(--reveal-duration, 0.4s) ease-out both;
+  animation-delay: var(--reveal-delay, 0s);
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(var(--reveal-x, 0), var(--reveal-y, 12px), 0);
+    filter: blur(var(--reveal-blur, 0));
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    filter: blur(0);
+  }
+}
+
 ::view-transition-old(root),
 ::view-transition-new(root) {
   animation: none;

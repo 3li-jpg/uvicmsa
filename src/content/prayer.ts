@@ -1,6 +1,4 @@
-import type { PrayerInfo } from '../data/types'
-
-export const prayerInfo: PrayerInfo = {
+export const prayerInfo = {
   jummahTitle: 'This Week’s Jummah',
   frequency: 'Every Friday',
   time: '1:30 PM',
