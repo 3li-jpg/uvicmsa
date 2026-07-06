@@ -28,16 +28,18 @@ The site is designed as a calm, editorial landing page for Muslim student life a
 ```text
 app/                    Next.js app router entrypoints
   page.tsx              Main homepage route
-  resources/            Route compatibility redirects and resource paths
+  counselling/          Ruh mental health support page
+  layout.tsx            Root layout, metadata, fonts, theme provider
 src/
-  App.tsx               Homepage composition
   components/           Layout, section, and UI components
   content/              Site content and structured link data
-  data/                 Shared TypeScript types
   hooks/                React hooks
   lib/                  Utility helpers
 public/                 Static assets
+docs/                   Audits, plans, and design files
 ```
+
+Legacy routes (`/ruh`, `/resources/ruh-counselling`) permanently redirect to `/counselling` via `next.config.js`.
 
 ## Content summary
 

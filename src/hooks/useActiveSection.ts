@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export function useActiveSection(sectionIds: string[], enabled = true) {
-  const [activeSection, setActiveSection] = useState<string | undefined>(sectionIds[0])
+  const [activeSection, setActiveSection] = useState<string | undefined>(undefined)
 
   useEffect(() => {
     if (!enabled) {

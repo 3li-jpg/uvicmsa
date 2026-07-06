@@ -21,7 +21,7 @@ export function PrayerSection() {
               <div>
                 <div className="flex flex-wrap items-center justify-between gap-4">
                   <div>
-                    <p className="text-sm uppercase tracking-[0.24em] text-ivory/60">{prayerInfo.jummahTitle}</p>
+                    <p className="text-sm uppercase tracking-[0.24em] text-ivory/75">{prayerInfo.jummahTitle}</p>
                     <h3 className="mt-4 font-display text-3xl font-bold tracking-[-0.06em] sm:text-4xl">
                       Jummah Prayer
                     </h3>
@@ -34,12 +34,12 @@ export function PrayerSection() {
                 <div className="mt-7 grid gap-4 sm:mt-10 sm:grid-cols-2">
                   <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-4 backdrop-blur-xl sm:p-5">
                     <Clock3 className="h-5 w-5 text-gold" />
-                    <p className="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/60">Time</p>
+                    <p className="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/75">Time</p>
                     <p className="mt-2 font-display text-2xl font-bold tracking-[-0.05em]">{prayerInfo.time}</p>
                   </div>
                   <div className="rounded-[1.5rem] border border-white/12 bg-white/8 p-4 backdrop-blur-xl sm:p-5">
                     <MapPin className="h-5 w-5 text-gold" />
-                    <p className="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/60">Location</p>
+                    <p className="mt-5 text-sm uppercase tracking-[0.18em] text-ivory/75">Location</p>
                     <p className="mt-2 font-display text-2xl font-bold tracking-[-0.05em]">{prayerInfo.location}</p>
                   </div>
                 </div>
@@ -57,7 +57,7 @@ export function PrayerSection() {
                     <DoorOpen className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="eyebrow !text-body/45 dark:!text-ivory/80">Prayer room</p>
+                    <p className="eyebrow !text-body/70 dark:!text-ivory/80">Prayer room</p>
                     <h3 className="mt-3 text-2xl font-semibold tracking-[-0.04em] text-deep dark:text-ivory">{prayerInfo.prayerRoomTitle}</h3>
                     <p className="mt-3 text-lg text-body/80 dark:text-ivory/90">{prayerInfo.room}</p>
                     <p className="mt-4 text-sm leading-7 text-body/78 dark:text-ivory/90">A quiet campus space for daily prayer, reflection, and moments of stillness between classes.</p>
@@ -73,7 +73,7 @@ export function PrayerSection() {
                     <KeyRound className="h-5 w-5" />
                   </div>
                   <div>
-                    <p className="eyebrow !text-body/45 dark:!text-ivory/80">Access note</p>
+                    <p className="eyebrow !text-body/70 dark:!text-ivory/80">Access note</p>
                     <p className="mt-3 text-base leading-8 text-body/82 dark:text-ivory/90">{prayerInfo.accessNote}</p>
                   </div>
                 </div>

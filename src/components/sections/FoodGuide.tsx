@@ -18,7 +18,7 @@ export function FoodGuide() {
           description="This guide brings together a selection of restaurants and markets students may find useful around UVic and the wider area."
         />
         <BlurFade inView delay={0.04}>
-          <p className="mt-5 inline-flex rounded-full border border-white/70 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-body/55 shadow-soft dark:border-white/10 dark:bg-white/[0.08] dark:text-ivory/70">
+          <p className="mt-5 inline-flex rounded-full border border-white/70 bg-white/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-body/70 shadow-soft dark:border-white/10 dark:bg-white/[0.08] dark:text-ivory/70">
             Click to view locations on Google Maps
           </p>
         </BlurFade>
@@ -31,7 +31,7 @@ export function FoodGuide() {
                   <UtensilsCrossed className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="eyebrow !text-body/45 dark:!text-ivory/80">Restaurants</p>
+                  <p className="eyebrow !text-body/70 dark:!text-ivory/80">Restaurants</p>
                   <h3 className="mt-2 font-display text-2xl font-bold tracking-[-0.05em] text-deep dark:text-ivory">Places to eat and gather</h3>
                 </div>
               </div>
@@ -54,7 +54,7 @@ export function FoodGuide() {
                   <ShoppingBag className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="eyebrow !text-body/45 dark:!text-ivory/80">Markets</p>
+                  <p className="eyebrow !text-body/70 dark:!text-ivory/80">Markets</p>
                   <h3 className="mt-2 font-display text-2xl font-bold tracking-[-0.05em] text-deep dark:text-ivory">Grocery and pantry options</h3>
                 </div>
               </div>

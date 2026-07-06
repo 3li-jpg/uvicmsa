@@ -61,7 +61,7 @@ export function ResourcesSection() {
           <Card className="overflow-hidden border-white/30 bg-[linear-gradient(145deg,rgba(31,43,61,0.94),rgba(110,143,182,0.78))] p-5 text-ivory shadow-[0_24px_80px_rgba(93,123,162,0.2)] sm:p-8">
             <div className="grid gap-8 lg:grid-cols-[minmax(0,1.1fr)_auto] lg:items-end">
               <div>
-                <p className="text-sm uppercase tracking-[0.24em] text-ivory/60">{ruhContent.eyebrow}</p>
+                <p className="text-sm uppercase tracking-[0.24em] text-ivory/75">{ruhContent.eyebrow}</p>
                 <h3 className="mt-4 max-w-3xl font-display text-3xl font-bold tracking-[-0.05em] text-ivory sm:text-4xl">
                   {ruhContent.title}
                 </h3>

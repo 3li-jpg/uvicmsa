@@ -122,7 +122,7 @@ html.dark ::selection {
   line-height: 1rem;
   letter-spacing: 0.26em;
   text-transform: uppercase;
-  color: rgba(53, 66, 86, 0.56);
+  color: rgba(53, 66, 86, 0.75);
 }
 
 .ambient-orb {
@@ -135,6 +135,10 @@ html.dark ::selection {
 .reveal {
   animation: reveal var(--reveal-duration, 0.4s) ease-out both;
   animation-delay: var(--reveal-delay, 0s);
+}
+
+.reveal-pending {
+  opacity: 0;
 }
 
 @keyframes reveal {

@@ -10,7 +10,7 @@ export function TeamSection() {
         <SectionHeading
           eyebrow="Current team"
           title="Current UVic MSA executive team."
-          description="Updated from the previous MSA website."
+          description="Meet the students leading the MSA this year."
         />
 
         <BlurFade inView delay={0.08}>

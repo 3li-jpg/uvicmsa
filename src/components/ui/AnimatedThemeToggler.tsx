@@ -36,8 +36,9 @@ export function AnimatedThemeToggler({ className, duration = 400, ...props }: An
 
     const applyTheme = () => {
       setTheme(nextTheme)
+      // next-themes persists the choice; the class is toggled here as well so the
+      // change is captured synchronously inside the view transition snapshot.
       document.documentElement.classList.toggle('dark', nextTheme === 'dark')
-      localStorage.setItem('theme', nextTheme)
     }
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || typeof document.startViewTransition !== 'function') {

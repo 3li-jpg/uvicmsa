@@ -49,6 +49,8 @@ export function Navbar() {
       return
     }
 
+    const menuButton = menuButtonRef.current
+
     const focusableSelector = [
       'a[href]',
       'button:not([disabled])',
@@ -62,7 +64,7 @@ export function Navbar() {
       const menuElements = mobileMenuRef.current
         ? Array.from(mobileMenuRef.current.querySelectorAll<HTMLElement>(focusableSelector))
         : []
-      return [menuButtonRef.current, ...menuElements].filter((element): element is HTMLElement => Boolean(element))
+      return [menuButton, ...menuElements].filter((element): element is HTMLElement => Boolean(element))
     }
 
     const focusFirstMenuItem = window.requestAnimationFrame(() => {
@@ -101,7 +103,7 @@ export function Navbar() {
     return () => {
       window.cancelAnimationFrame(focusFirstMenuItem)
       document.removeEventListener('keydown', onKeyDown)
-      menuButtonRef.current?.focus()
+      menuButton?.focus()
     }
   }, [isOpen])
 
@@ -212,7 +214,7 @@ export function Navbar() {
           </nav>
 
           <div className="rounded-[1.75rem] border border-white/80 bg-white/72 p-5 shadow-soft backdrop-blur-md dark:border-white/10 dark:bg-white/8 sm:rounded-[2rem] sm:p-6">
-            <p className="text-sm uppercase tracking-[0.2em] text-body/55 dark:text-ivory/80">Get connected</p>
+            <p className="text-sm uppercase tracking-[0.2em] text-body/70 dark:text-ivory/80">Get connected</p>
             <p className="mt-3 max-w-sm text-sm leading-7 text-body/78 dark:text-ivory/90">
               Join Jummah, message the team for prayer room access, and stay close to the community through the year.
             </p>

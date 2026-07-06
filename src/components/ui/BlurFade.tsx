@@ -1,6 +1,7 @@
 'use client'
 
 import type { CSSProperties, HTMLAttributes, ReactNode } from 'react'
+import { useRevealOnScroll } from '../../hooks/useRevealOnScroll'
 
 function seconds(value: number) {
   return value > 10 ? value / 1000 : value
@@ -15,7 +16,6 @@ type BlurFadeProps = HTMLAttributes<HTMLDivElement> & {
   inView?: boolean
   inViewMargin?: string
   blur?: string
-  variant?: unknown
 }
 
 export function BlurFade({
@@ -25,18 +25,21 @@ export function BlurFade({
   delay = 0,
   offset = 6,
   direction = 'down',
-  inView: _inView,
-  inViewMargin: _inViewMargin,
+  inView = false,
+  inViewMargin = '0px 0px -10% 0px',
   blur = '6px',
-  variant: _variant,
   style,
   ...props
 }: BlurFadeProps) {
+  const { ref, phase } = useRevealOnScroll<HTMLDivElement>(inView, inViewMargin)
   const distance = `${direction === 'right' || direction === 'down' ? -offset : offset}px`
 
   return (
     <div
-      className={['reveal mobile-filter-reset', className].filter(Boolean).join(' ')}
+      className={[phase === 'pending' ? 'reveal-pending' : 'reveal', 'mobile-filter-reset', className]
+        .filter(Boolean)
+        .join(' ')}
+      ref={ref}
       style={{
         '--reveal-delay': `${0.04 + seconds(delay)}s`,
         '--reveal-duration': `${seconds(duration)}s`,

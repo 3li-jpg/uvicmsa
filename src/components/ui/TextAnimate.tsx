@@ -1,4 +1,7 @@
+'use client'
+
 import type { CSSProperties, HTMLAttributes } from 'react'
+import { useRevealOnScroll } from '../../hooks/useRevealOnScroll'
 import { cn } from '../../lib/cn'
 
 type TextTag = 'article' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'li' | 'p' | 'section' | 'span'
@@ -8,13 +11,7 @@ type TextAnimateProps = HTMLAttributes<HTMLElement> & {
   delay?: number
   duration?: number
   as?: TextTag
-  by?: 'text' | 'word' | 'character' | 'line'
-  animation?: string
-  accessible?: boolean
-  segmentClassName?: string
   startOnView?: boolean
-  once?: boolean
-  variants?: unknown
 }
 
 export function TextAnimate({
@@ -23,19 +20,16 @@ export function TextAnimate({
   delay = 0,
   duration = 0.4,
   as: Component = 'p',
-  by: _by,
-  animation: _animation,
-  accessible: _accessible,
-  segmentClassName: _segmentClassName,
-  startOnView: _startOnView,
-  once: _once,
-  variants: _variants,
+  startOnView = true,
   style,
   ...props
 }: TextAnimateProps) {
+  const { ref, phase } = useRevealOnScroll<HTMLElement>(startOnView)
+
   return (
     <Component
-      className={cn('reveal whitespace-pre-wrap', className)}
+      className={cn(phase === 'pending' ? 'reveal-pending' : 'reveal', 'whitespace-pre-wrap', className)}
+      ref={ref as never}
       style={{
         '--reveal-delay': `${delay}s`,
         '--reveal-duration': `${duration}s`,

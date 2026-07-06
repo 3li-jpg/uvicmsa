@@ -68,7 +68,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.15fr)_minmax(220px,0.5fr)_minmax(260px,0.7fr)] lg:gap-16">
           <BlurFade inView delay={0.04}>
             <div>
-              <p className="text-sm uppercase tracking-[0.24em] text-ivory/55">UVic MSA</p>
+              <p className="text-sm uppercase tracking-[0.24em] text-ivory/75">UVic MSA</p>
               <h2 className="mt-5 max-w-2xl font-display text-4xl font-bold tracking-[-0.06em] text-ivory sm:text-5xl">
                 UVic Muslim Students’ Association
               </h2>
@@ -99,7 +99,7 @@ export function Footer() {
 
           <BlurFade inView delay={0.1}>
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-ivory/50">Navigation</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-ivory/75">Navigation</p>
               <ul className="mt-5 space-y-3 text-sm text-ivory/80">
                 {navItems.map((item) => (
                   <li key={item.id}>
@@ -115,10 +115,10 @@ export function Footer() {
 
           <BlurFade inView delay={0.16}>
             <div>
-              <p className="text-sm uppercase tracking-[0.2em] text-ivory/50">Key details</p>
+              <p className="text-sm uppercase tracking-[0.2em] text-ivory/75">Key details</p>
               <dl className="mt-5 space-y-6">
                 <div className="border-b border-white/10 pb-6">
-                  <dt className="flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-ivory/55">
+                  <dt className="flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-ivory/75">
                     <Clock3 className="h-4 w-4 text-gold" />
                     Jummah
                   </dt>
@@ -126,7 +126,7 @@ export function Footer() {
                   <dd className="mt-2 text-sm leading-7 text-ivory/80">UVic Multifaith Centre</dd>
                 </div>
                 <div>
-                  <dt className="flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-ivory/55">
+                  <dt className="flex items-center gap-3 text-sm uppercase tracking-[0.2em] text-ivory/75">
                     <DoorOpen className="h-4 w-4 text-gold" />
                     Prayer room
                   </dt>
@@ -138,6 +138,10 @@ export function Footer() {
               </dl>
             </div>
           </BlurFade>
+        </div>
+
+        <div className="mt-14 border-t border-white/10 pt-6 text-sm text-ivory/75 sm:mt-16">
+          © {new Date().getFullYear()} UVic Muslim Students’ Association
         </div>
       </Container>
     </footer>

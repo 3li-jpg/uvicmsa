@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     url: '/counselling',
   },
   twitter: {
+    card: 'summary_large_image',
     title,
     description,
   },
@@ -66,7 +67,7 @@ export default function CounsellingPage() {
           <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(340px,0.48fr)] lg:items-stretch">
             <BlurFade inView delay={0.06}>
               <Card className="overflow-hidden border-white/30 bg-[linear-gradient(145deg,rgba(31,43,61,0.96),rgba(110,143,182,0.78))] p-6 text-ivory shadow-[0_24px_80px_rgba(93,123,162,0.2)] sm:p-10 lg:p-12">
-                <p className="text-sm uppercase tracking-[0.24em] text-ivory/60">{ruhContent.eyebrow}</p>
+                <p className="text-sm uppercase tracking-[0.24em] text-ivory/75">{ruhContent.eyebrow}</p>
                 <h1 className="mt-5 max-w-4xl font-display text-4xl font-bold tracking-[-0.06em] text-ivory sm:text-6xl lg:text-7xl">
                   Mental health support that understands Muslim students.
                 </h1>

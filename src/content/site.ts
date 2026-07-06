@@ -1,11 +1,11 @@
 export const navItems = [
-  { id: 'home', label: 'Home', href: '/#home', sectionId: 'home' },
   { id: 'about', label: 'About', href: '/#about', sectionId: 'about' },
   { id: 'prayer', label: 'Prayer', href: '/#prayer', sectionId: 'prayer' },
   { id: 'events', label: 'Events', href: '/#events', sectionId: 'events' },
-  { id: 'food', label: 'Food Guide', href: '/#food', sectionId: 'food' },
-  { id: 'team', label: 'Current Team', href: '/#team', sectionId: 'team' },
+  { id: 'team', label: 'Team', href: '/#team', sectionId: 'team' },
   { id: 'resources', label: 'Resources', href: '/#resources', sectionId: 'resources' },
+  { id: 'food', label: 'Food Guide', href: '/#food', sectionId: 'food' },
+  { id: 'faq', label: 'FAQ', href: '/#faq', sectionId: 'faq' },
   { id: 'contact', label: 'Contact', href: '/#contact', sectionId: 'contact' },
 ]
 

@@ -1,5 +1,5 @@
 import { Clock3, MapPin } from 'lucide-react'
-import { heroContent } from '../../content/site'
+import { externalLinks, heroContent } from '../../content/site'
 import { BlurFade } from '../ui/BlurFade'
 import { Button } from '../ui/Button'
 import { Container } from '../ui/Container'
@@ -14,11 +14,8 @@ export function Hero() {
             <p className="eyebrow dark:text-ivory/80">{heroContent.eyebrow}</p>
             <TextAnimate
               as="h1"
-              animation="blurInUp"
-              by="word"
               className="mt-3 max-w-4xl font-display text-[2rem] font-semibold leading-[1.06] tracking-[-0.035em] text-deep dark:text-ivory sm:mt-6 sm:text-6xl sm:font-bold sm:leading-[0.9] sm:tracking-[-0.075em] lg:text-7xl xl:text-[5.4rem] xl:leading-[0.9]"
               duration={0.7}
-              once
               startOnView={false}
             >
               {heroContent.title}
@@ -28,7 +25,12 @@ export function Hero() {
             </p>
 
             <div className="mt-6 grid w-full max-w-sm grid-cols-1 gap-3 sm:mt-10 sm:max-w-md sm:grid-cols-[1.2fr_1fr] sm:gap-4 lg:flex lg:w-auto lg:max-w-none lg:justify-start">
-              <Button className="min-h-11 w-full whitespace-nowrap rounded-full px-5 py-3 text-sm leading-tight sm:px-6" href="#contact">
+              <Button
+                className="min-h-11 w-full whitespace-nowrap rounded-full px-5 py-3 text-sm leading-tight sm:px-6"
+                href={externalLinks.discord}
+                rel="noreferrer"
+                target="_blank"
+              >
                 {heroContent.primaryCta}
               </Button>
               <Button className="min-h-11 w-full whitespace-nowrap rounded-full px-5 py-3 text-sm leading-tight sm:px-6" href="#prayer" variant="secondary">

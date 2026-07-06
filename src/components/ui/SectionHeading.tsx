@@ -15,12 +15,9 @@ export function SectionHeading({ eyebrow, title, description, align = 'left' }: 
       <p className="eyebrow dark:text-ivory/80">{eyebrow}</p>
       {typeof title === 'string' ? (
         <TextAnimate
-          animation="blurInUp"
           as="h2"
-          by="word"
           className="mt-4 font-display text-3xl font-bold leading-tight tracking-[-0.055em] text-deep dark:text-ivory sm:text-4xl lg:text-5xl lg:leading-[0.95]"
           duration={0.65}
-          once
         >
           {title}
         </TextAnimate>

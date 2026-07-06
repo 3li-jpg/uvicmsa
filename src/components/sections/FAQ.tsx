@@ -4,9 +4,23 @@ import { Container } from '../ui/Container'
 import { BlurFade } from '../ui/BlurFade'
 import { SectionHeading } from '../ui/SectionHeading'
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.answer,
+    },
+  })),
+}
+
 export function FAQ() {
   return (
     <section className="py-12 sm:py-24 lg:py-28" id="faq">
+      <script dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} type="application/ld+json" />
       <Container>
         <BlurFade inView delay={0.04}>
           <SectionHeading

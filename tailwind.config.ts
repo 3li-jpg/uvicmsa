@@ -28,10 +28,6 @@ export default {
           'radial-gradient(circle at top, rgba(183, 200, 234, 0.5), transparent 38%), radial-gradient(circle at 18% 18%, rgba(215, 230, 242, 0.9), transparent 28%), linear-gradient(180deg, rgba(248, 245, 239, 0.92) 0%, rgba(238, 243, 248, 0.96) 100%)',
       },
       keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-6px)' },
-        },
         drift: {
           '0%, 100%': { transform: 'translate3d(0, 0, 0)', opacity: '0.68' },
           '50%': { transform: 'translate3d(0, -14px, 0)', opacity: '0.94' },
@@ -42,7 +38,6 @@ export default {
         },
       },
       animation: {
-        float: 'float 12s ease-in-out infinite',
         drift: 'drift 14s ease-in-out infinite',
         'pulse-soft': 'pulseSoft 9s ease-in-out infinite',
       },
